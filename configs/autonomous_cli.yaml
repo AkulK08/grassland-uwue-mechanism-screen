@@ -1,0 +1,29 @@
+project:
+  mode: autonomous_cli
+  random_seed: 42
+
+remote:
+  backend: earthengine_gcs
+  project: YOUR_GCP_PROJECT_ID
+  bucket: YOUR_BUCKET_NAME_WITHOUT_GS_PREFIX
+  prefix: wue_remote
+  points_asset: projects/YOUR_GCP_PROJECT_ID/assets/wue/stable_grassland_points
+  start_year: 2001
+  end_year: 2024
+  n_points: 50000
+  sampling_scale_m: 10000
+
+point_backend:
+  raw_export_glob: data/raw/gee/wue_timeseries_*.csv
+  prepared_table: data/processed/point_timeseries_prepared.csv
+  fit_results: results/tables/point_gate2_pixel_results.csv
+  robustness_summary: results/tables/point_gate2_robustness_matrix.csv
+  gpp_products: [MODIS, PML]
+  et_products: [MODIS, PML]
+  note: "Add GOSIF and GLEAM columns after external agents sample those products."
+
+analysis:
+  min_obs_per_fit: 50
+  bootstrap_iterations: 1000
+  gpp_floor: 0.05
+  et_floor: 0.1

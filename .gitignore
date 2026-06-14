@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+venv/
+*.egg-info/
+
+# Secrets / credentials
+*.json
+*.pem
+*.key
+*.token
+secrets/
+credentials/
+.envrc
+
+# Data
+data/raw/
+data/raw_original/
+data/external/
+data/interim/
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.zarr
+*.zarr/
+*.nc
+*.tif
+*.tiff
+*.hdf
+*.h5
+*.csv
+
+# Keep demo data if useful
+!data/demo/
+!data/demo/**
+
+# Results
+results/
+logs/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

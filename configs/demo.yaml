@@ -1,0 +1,59 @@
+project:
+  name: grassland_wue_demo
+  mode: demo
+  random_seed: 42
+  n_jobs: 1
+
+paths:
+  raw: data/raw
+  demo: data/demo
+  interim: data/interim
+  processed: data/processed
+  external: data/external
+  tables: results/tables
+  figures: results/figures
+  memos: results/memos
+  manuscript: results/manuscript
+  logs: logs
+
+analysis:
+  start_date: "2015-01-01"
+  end_date: "2023-12-31"
+  base_frequency: "8D"
+  grid_resolution_degrees: 0.1
+  pilot_sample_size: 4
+  min_observations: 40
+  bootstrap_iterations: 3
+  bayesian_iterations: 1000
+  bayesian_enabled: false
+  co2_reference_ppm: 398.0
+  gpp_floor: 0.05
+  et_floor: 0.1
+  aridity_bins: 4
+  quality:
+    max_gap_fraction: 0.30
+    min_valid_fraction_8day: 0.80
+    energy_balance_min: 0.70
+    energy_balance_max: 1.30
+    tower_min_years: 3
+
+products:
+  gpp: [MODIS, GOSIF, PML]
+  et: [MODIS, GLEAM, PML]
+  stress_definitions: [zscore, percentile, copula, interaction]
+  growing_seasons: [gpp_threshold, climate_threshold, month_fixed_effects]
+
+spatial:
+  grassland_classes: [10]
+  biome_extension_classes: [8, 9]
+  stable_land_cover_years: [2015, 2023]
+  exclude_burned_year_buffer: 1
+  irrigation_fraction_max: 0.10
+
+trait_analysis:
+  dependent_metric: slope_change
+  predictors: [psi50_abs, isohydricity, rooting_depth]
+  climate_covariates: [aridity_index, map, mat, lai]
+  random_forest_estimators: 50
+  bayesian_enabled: false
+  success_trait_variance_min: 0.20

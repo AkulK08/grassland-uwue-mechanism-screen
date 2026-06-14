@@ -1,0 +1,93 @@
+project:
+  name: grassland_wue_production
+  mode: production
+  random_seed: 42
+  n_jobs: 8
+
+paths:
+  raw: data/raw
+  demo: data/demo
+  interim: data/interim
+  processed: data/processed
+  external: data/external
+  tables: results/tables
+  figures: results/figures
+  memos: results/memos
+  manuscript: results/manuscript
+  logs: logs
+
+analysis:
+  start_date: "2001-01-01"
+  end_date: "2024-12-31"
+  base_frequency: "8D"
+  grid_resolution_degrees: 0.1
+  pilot_sample_size: 500
+  min_observations: 50
+  bootstrap_iterations: 1000
+  bayesian_iterations: 4000
+  bayesian_enabled: true
+  co2_reference_ppm: 398.0
+  gpp_floor: 0.05
+  et_floor: 0.1
+  aridity_bins: 4
+  quality:
+    max_gap_fraction: 0.30
+    min_valid_fraction_8day: 0.80
+    energy_balance_min: 0.70
+    energy_balance_max: 1.30
+    tower_min_years: 3
+
+products:
+  gpp: [MODIS, GOSIF, PML]
+  et: [MODIS, GLEAM, PML]
+  stress_definitions: [zscore, percentile, copula, interaction]
+  growing_seasons: [gpp_threshold, climate_threshold, month_fixed_effects]
+
+spatial:
+  grassland_classes: [10]
+  biome_extension_classes: [8, 9]
+  stable_land_cover_years: [2001, 2024]
+  exclude_burned_year_buffer: 1
+  irrigation_fraction_max: 0.10
+
+# Production catalog: replace every path with local files.
+# The loader accepts NetCDF, Zarr stores, GeoTIFF stacks, and CSV tower tables.
+data_catalog:
+  gpp:
+    MODIS: data/raw/modis_mod17_gpp_8day_0p1deg.zarr
+    GOSIF: data/raw/gosif_gpp_8day_0p1deg.zarr
+    PML: data/raw/pml_gpp_8day_0p1deg.zarr
+  et:
+    MODIS: data/raw/modis_mod16_et_8day_0p1deg.zarr
+    GLEAM: data/raw/gleam_et_8day_0p1deg.zarr
+    PML: data/raw/pml_et_8day_0p1deg.zarr
+  met:
+    vpd: data/raw/era5land_vpd_8day_0p1deg.zarr
+    soil_moisture: data/raw/era5land_rootzone_sm_8day_0p1deg.zarr
+    temperature: data/raw/era5land_temperature_8day_0p1deg.zarr
+    precipitation: data/raw/era5land_precipitation_8day_0p1deg.zarr
+  masks:
+    landcover: data/raw/mcd12q1_annual_igbp_0p1deg.zarr
+    burned_area: data/raw/mcd64a1_burned_0p1deg.zarr
+    irrigated_fraction: data/external/irrigated_fraction_0p1deg.nc
+  ancillary:
+    aridity_index: data/external/cgiar_aridity_index_0p1deg.nc
+    lai: data/raw/mod15_lai_8day_0p1deg.zarr
+    co2: data/external/noaa_co2_8day.csv
+  towers:
+    fluxnet: data/raw/towers/fluxnet2015_grassland_sites.csv
+    ameriflux: data/raw/towers/ameriflux_grassland_sites.csv
+    icos: data/raw/towers/icos_grassland_sites.csv
+    ozflux: data/raw/towers/ozflux_grassland_sites.csv
+  traits:
+    psi50: data/external/liu_2021_psi50_0p1deg.nc
+    isohydricity: data/external/konings_gentine_isohydricity_0p1deg.nc
+    rooting_depth: data/external/stocker_2023_rooting_depth_0p1deg.nc
+
+trait_analysis:
+  dependent_metric: slope_change
+  predictors: [psi50_abs, isohydricity, rooting_depth]
+  climate_covariates: [aridity_index, map, mat, lai]
+  random_forest_estimators: 500
+  bayesian_enabled: true
+  success_trait_variance_min: 0.20

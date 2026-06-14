@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grassland-wue-nature-pipeline"
+version = "0.2.0"
+description = "End-to-end gated pipeline for global grassland WUE response under compound atmospheric-soil moisture stress."
+authors = [{name = "WUE Project"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "xarray>=2024.1",
+  "netCDF4>=1.6",
+  "h5netcdf>=1.3",
+  "zarr>=2.16",
+  "dask[complete]>=2024.1",
+  "scipy>=1.10",
+  "statsmodels>=0.14",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "pyyaml>=6.0",
+  "click>=8.1",
+  "tqdm>=4.66",
+  "joblib>=1.3",
+  "rasterio>=1.3",
+  "rioxarray>=0.15",
+  "pyproj>=3.6",
+  "shapely>=2.0",
+  "geopandas>=0.14",
+  "seaborn>=0.13",
+  "arviz>=0.16",
+  "pymc>=5.9",
+  "shap>=0.44",
+  "earthengine-api>=0.1.400",
+  "google-cloud-storage>=2.14"
+]
+
+[project.optional-dependencies]
+download = ["earthaccess>=0.8", "cdsapi>=0.6"]
+dev = ["pytest>=7.4", "ruff>=0.1", "black>=23.0", "mypy>=1.7"]
+
+[project.scripts]
+wue = "wue_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100

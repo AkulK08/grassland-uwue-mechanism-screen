@@ -1,0 +1,37 @@
+name: grassland_wue_nature
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - xarray
+  - netcdf4
+  - h5netcdf
+  - zarr
+  - dask
+  - distributed
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - click
+  - tqdm
+  - joblib
+  - rasterio
+  - rioxarray
+  - pyproj
+  - shapely
+  - geopandas
+  - seaborn
+  - arviz
+  - pymc
+  - shap
+  - earthaccess
+  - cdsapi
+  - pytest
+  - black
+  - ruff
+  - pip
