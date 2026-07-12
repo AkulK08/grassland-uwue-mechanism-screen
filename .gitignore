@@ -1,50 +1,40 @@
-# Python
+.DS_Store
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 .ipynb_checkpoints/
-
-# Environments
 .env
-.venv/
-venv/
-*.egg-info/
-
-# Secrets / credentials
-*.json
+.env.*
+.netrc
 *.pem
 *.key
-*.token
-secrets/
-credentials/
-.envrc
-
-# Data
+*token*
+*secret*
+*credential*
 data/raw/
-data/raw_original/
 data/external/
-data/interim/
-data/processed/*.csv
-data/processed/*.parquet
-data/processed/*.zarr
-*.zarr/
+data/cache/
+data/tmp/
+downloads/
 *.nc
-*.tif
-*.tiff
+*.nc4
 *.hdf
 *.h5
-*.csv
-
-# Keep demo data if useful
-!data/demo/
-!data/demo/**
-
-# Results
-results/
-logs/
-
-# OS/editor
-.DS_Store
-.vscode/
-.idea/
+*.tif
+*.tiff
+*.grib
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.mp4
+*.mov
+*.avi
+*.pdf
+*.docx
+*.pptx
+*.key
+*.pages
+results/**/figures/*.png
+results/**/figures/*.jpg
+results/**/figures/*.jpeg
+results/**/figures/*.pdf

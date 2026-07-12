@@ -1,0 +1,33 @@
+{
+  "base_dataset": "/Users/me/Downloads/grassland_wue_nature_repo/results/trait_framework/trait_model_dataset.csv",
+  "rows": 199,
+  "columns_before_aux_merge": 300,
+  "columns_after_aux_merge": 532,
+  "auxiliary_columns_added": 232,
+  "primary_outcome": "consensus_slope_change_all",
+  "strict_ecological_features": 71,
+  "mechanisms_tested": 825,
+  "exact_product_slope_outcomes": 47,
+  "clean_mask": {
+    "status": "CLEAN_MASK_INFERRED",
+    "n_clean": 165,
+    "n_total": 199,
+    "used_columns": "analysis_natural_grassland_like_no_crop",
+    "decision": "direct_clean_column"
+  },
+  "primary_pass_count": 84,
+  "gate_survivor_count": 117,
+  "full_reza_strict_pass_count": 0,
+  "satellite_strict_no_tower_pass_count": 15,
+  "c4_rows_found": 30,
+  "seed": 123,
+  "n_boot": 300,
+  "programming_fixes": [
+    "Response-derived and product-derived predictor columns are excluded.",
+    "Exact product tests use product-specific slope_change outcomes only.",
+    "Auxiliary C4, crop, land-cover, trait, soil, and climate columns are merged when point_id or lat/lon keys exist.",
+    "Clean land-cover/C4-crop mask is a gate, not a primary filter.",
+    "GOSIF\u00d7GLEAM is explicitly required for product gate pass.",
+    "Closest mechanisms are ranked without converting near-pass into pass."
+  ]
+}

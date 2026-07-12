@@ -1,0 +1,2 @@
+status,n_clean,n_total,used_columns,decision
+CLEAN_MASK_INFERRED,165,199,analysis_natural_grassland_like_no_crop,direct_clean_column

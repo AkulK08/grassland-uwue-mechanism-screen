@@ -1,0 +1,826 @@
+id,feature,type,moderator,params
+linear__mean_obs_soil_moisture,mean_obs_soil_moisture,linear,,{}
+quadratic__mean_obs_soil_moisture,mean_obs_soil_moisture,quadratic,,{}
+low_tail_q10__mean_obs_soil_moisture,mean_obs_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.1549606538023947}"
+hinge_low_q10__mean_obs_soil_moisture,mean_obs_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.1549606538023947}"
+low_tail_q25__mean_obs_soil_moisture,mean_obs_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.7422906030469142}"
+hinge_low_q25__mean_obs_soil_moisture,mean_obs_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.7422906030469142}"
+high_tail_q75__mean_obs_soil_moisture,mean_obs_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.7780138276584856}"
+hinge_high_q75__mean_obs_soil_moisture,mean_obs_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.7780138276584856}"
+high_tail_q90__mean_obs_soil_moisture,mean_obs_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.1901415399224458}"
+hinge_high_q90__mean_obs_soil_moisture,mean_obs_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.1901415399224458}"
+interaction_with_mean_annual_temperature__mean_obs_soil_moisture,mean_obs_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__mean_obs_soil_moisture,mean_obs_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__mean_obs_soil_moisture,mean_obs_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_obs_soil_moisture,mean_obs_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__mean_soil_moisture,mean_soil_moisture,linear,,{}
+quadratic__mean_soil_moisture,mean_soil_moisture,quadratic,,{}
+low_tail_q10__mean_soil_moisture,mean_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.1549606538023947}"
+hinge_low_q10__mean_soil_moisture,mean_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.1549606538023947}"
+low_tail_q25__mean_soil_moisture,mean_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.7422906030469142}"
+hinge_low_q25__mean_soil_moisture,mean_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.7422906030469142}"
+high_tail_q75__mean_soil_moisture,mean_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.7780138276584856}"
+hinge_high_q75__mean_soil_moisture,mean_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.7780138276584856}"
+high_tail_q90__mean_soil_moisture,mean_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.1901415399224458}"
+hinge_high_q90__mean_soil_moisture,mean_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.1901415399224458}"
+interaction_with_mean_annual_temperature__mean_soil_moisture,mean_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__mean_soil_moisture,mean_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__mean_soil_moisture,mean_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_soil_moisture,mean_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_soil_moisture,median_soil_moisture,linear,,{}
+quadratic__median_soil_moisture,median_soil_moisture,quadratic,,{}
+low_tail_q10__median_soil_moisture,median_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.1784970479761312}"
+hinge_low_q10__median_soil_moisture,median_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.1784970479761312}"
+low_tail_q25__median_soil_moisture,median_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.7910861569964812}"
+hinge_low_q25__median_soil_moisture,median_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.7910861569964812}"
+high_tail_q75__median_soil_moisture,median_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.762717666319634}"
+hinge_high_q75__median_soil_moisture,median_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.762717666319634}"
+high_tail_q90__median_soil_moisture,median_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.155548624280388}"
+hinge_high_q90__median_soil_moisture,median_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.155548624280388}"
+interaction_with_mean_annual_temperature__median_soil_moisture,median_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__median_soil_moisture,median_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__median_soil_moisture,median_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_soil_moisture,median_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__n_soil_moisture,n_soil_moisture,linear,,{}
+quadratic__n_soil_moisture,n_soil_moisture,quadratic,,{}
+low_tail_q10__n_soil_moisture,n_soil_moisture,low_tail,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+hinge_low_q10__n_soil_moisture,n_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+low_tail_q25__n_soil_moisture,n_soil_moisture,low_tail,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+hinge_low_q25__n_soil_moisture,n_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+high_tail_q75__n_soil_moisture,n_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+hinge_high_q75__n_soil_moisture,n_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+high_tail_q90__n_soil_moisture,n_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+hinge_high_q90__n_soil_moisture,n_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+interaction_with_mean_annual_temperature__n_soil_moisture,n_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__n_soil_moisture,n_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__n_soil_moisture,n_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__n_soil_moisture,n_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p10_soil_moisture,p10_soil_moisture,linear,,{}
+quadratic__p10_soil_moisture,p10_soil_moisture,quadratic,,{}
+low_tail_q10__p10_soil_moisture,p10_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.0073577688942819}"
+hinge_low_q10__p10_soil_moisture,p10_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.0073577688942819}"
+low_tail_q25__p10_soil_moisture,p10_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.7483352969578972}"
+hinge_low_q25__p10_soil_moisture,p10_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.7483352969578972}"
+high_tail_q75__p10_soil_moisture,p10_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.805499218342024}"
+hinge_high_q75__p10_soil_moisture,p10_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.805499218342024}"
+high_tail_q90__p10_soil_moisture,p10_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.3083191769689615}"
+hinge_high_q90__p10_soil_moisture,p10_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.3083191769689615}"
+interaction_with_mean_annual_temperature__p10_soil_moisture,p10_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p10_soil_moisture,p10_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__p10_soil_moisture,p10_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p10_soil_moisture,p10_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p90_soil_moisture,p90_soil_moisture,linear,,{}
+quadratic__p90_soil_moisture,p90_soil_moisture,quadratic,,{}
+low_tail_q10__p90_soil_moisture,p90_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.2123126839918268}"
+hinge_low_q10__p90_soil_moisture,p90_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.2123126839918268}"
+low_tail_q25__p90_soil_moisture,p90_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.8010233028992819}"
+hinge_low_q25__p90_soil_moisture,p90_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.8010233028992819}"
+high_tail_q75__p90_soil_moisture,p90_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.6830919136061879}"
+hinge_high_q75__p90_soil_moisture,p90_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.6830919136061879}"
+high_tail_q90__p90_soil_moisture,p90_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.2991670096981776}"
+hinge_high_q90__p90_soil_moisture,p90_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.2991670096981776}"
+interaction_with_mean_annual_temperature__p90_soil_moisture,p90_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p90_soil_moisture,p90_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__p90_soil_moisture,p90_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p90_soil_moisture,p90_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__sd_soil_moisture,sd_soil_moisture,linear,,{}
+quadratic__sd_soil_moisture,sd_soil_moisture,quadratic,,{}
+low_tail_q10__sd_soil_moisture,sd_soil_moisture,low_tail,,"{'q': 0.1, 'cut': -1.2439405238413033}"
+hinge_low_q10__sd_soil_moisture,sd_soil_moisture,hinge_low,,"{'q': 0.1, 'cut': -1.2439405238413033}"
+low_tail_q25__sd_soil_moisture,sd_soil_moisture,low_tail,,"{'q': 0.25, 'cut': -0.8325328317083915}"
+hinge_low_q25__sd_soil_moisture,sd_soil_moisture,hinge_low,,"{'q': 0.25, 'cut': -0.8325328317083915}"
+high_tail_q75__sd_soil_moisture,sd_soil_moisture,high_tail,,"{'q': 0.75, 'cut': 0.8908611160071227}"
+hinge_high_q75__sd_soil_moisture,sd_soil_moisture,hinge_high,,"{'q': 0.75, 'cut': 0.8908611160071227}"
+high_tail_q90__sd_soil_moisture,sd_soil_moisture,high_tail,,"{'q': 0.9, 'cut': 1.3558937979762449}"
+hinge_high_q90__sd_soil_moisture,sd_soil_moisture,hinge_high,,"{'q': 0.9, 'cut': 1.3558937979762449}"
+interaction_with_mean_annual_temperature__sd_soil_moisture,sd_soil_moisture,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__sd_soil_moisture,sd_soil_moisture,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_aridity__sd_soil_moisture,sd_soil_moisture,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__sd_soil_moisture,sd_soil_moisture,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__env_hydroclimatic_regime_sahel_high_vpd,env_hydroclimatic_regime_sahel_high_vpd,linear,,{}
+linear__env_hydroclimatic_regime_sahel_not_high_vpd,env_hydroclimatic_regime_sahel_not_high_vpd,linear,,{}
+linear__env_mean_vpd_quartile_vpd_q1_low,env_mean_vpd_quartile_vpd_Q1_low,linear,,{}
+linear__env_mean_vpd_quartile_vpd_q2,env_mean_vpd_quartile_vpd_Q2,linear,,{}
+linear__env_mean_vpd_quartile_vpd_q3,env_mean_vpd_quartile_vpd_Q3,linear,,{}
+linear__env_mean_vpd_quartile_vpd_q4_high,env_mean_vpd_quartile_vpd_Q4_high,linear,,{}
+linear__mean_vpd,mean_vpd,linear,,{}
+quadratic__mean_vpd,mean_vpd,quadratic,,{}
+low_tail_q10__mean_vpd,mean_vpd,low_tail,,"{'q': 0.1, 'cut': -1.1041999236541442}"
+hinge_low_q10__mean_vpd,mean_vpd,hinge_low,,"{'q': 0.1, 'cut': -1.1041999236541442}"
+low_tail_q25__mean_vpd,mean_vpd,low_tail,,"{'q': 0.25, 'cut': -0.7362555439490339}"
+hinge_low_q25__mean_vpd,mean_vpd,hinge_low,,"{'q': 0.25, 'cut': -0.7362555439490339}"
+high_tail_q75__mean_vpd,mean_vpd,high_tail,,"{'q': 0.75, 'cut': 0.5330690956310911}"
+hinge_high_q75__mean_vpd,mean_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.5330690956310911}"
+high_tail_q90__mean_vpd,mean_vpd,high_tail,,"{'q': 0.9, 'cut': 1.5870502325753602}"
+hinge_high_q90__mean_vpd,mean_vpd,hinge_high,,"{'q': 0.9, 'cut': 1.5870502325753602}"
+interaction_with_mean_annual_temperature__mean_vpd,mean_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__mean_vpd,mean_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_vpd,mean_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_vpd,mean_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_vpd,median_vpd,linear,,{}
+quadratic__median_vpd,median_vpd,quadratic,,{}
+low_tail_q10__median_vpd,median_vpd,low_tail,,"{'q': 0.1, 'cut': -1.0361661589710802}"
+hinge_low_q10__median_vpd,median_vpd,hinge_low,,"{'q': 0.1, 'cut': -1.0361661589710802}"
+low_tail_q25__median_vpd,median_vpd,low_tail,,"{'q': 0.25, 'cut': -0.674058636645299}"
+hinge_low_q25__median_vpd,median_vpd,hinge_low,,"{'q': 0.25, 'cut': -0.674058636645299}"
+high_tail_q75__median_vpd,median_vpd,high_tail,,"{'q': 0.75, 'cut': 0.47477173189945693}"
+hinge_high_q75__median_vpd,median_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.47477173189945693}"
+high_tail_q90__median_vpd,median_vpd,high_tail,,"{'q': 0.9, 'cut': 1.737128659917444}"
+hinge_high_q90__median_vpd,median_vpd,hinge_high,,"{'q': 0.9, 'cut': 1.737128659917444}"
+interaction_with_mean_annual_temperature__median_vpd,median_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__median_vpd,median_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_vpd,median_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_vpd,median_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_vpd_sm_interaction,median_vpd_sm_interaction,linear,,{}
+quadratic__median_vpd_sm_interaction,median_vpd_sm_interaction,quadratic,,{}
+low_tail_q10__median_vpd_sm_interaction,median_vpd_sm_interaction,low_tail,,"{'q': 0.1, 'cut': -1.0313590838812263}"
+hinge_low_q10__median_vpd_sm_interaction,median_vpd_sm_interaction,hinge_low,,"{'q': 0.1, 'cut': -1.0313590838812263}"
+low_tail_q25__median_vpd_sm_interaction,median_vpd_sm_interaction,low_tail,,"{'q': 0.25, 'cut': -0.506666400582205}"
+hinge_low_q25__median_vpd_sm_interaction,median_vpd_sm_interaction,hinge_low,,"{'q': 0.25, 'cut': -0.506666400582205}"
+high_tail_q75__median_vpd_sm_interaction,median_vpd_sm_interaction,high_tail,,"{'q': 0.75, 'cut': 0.5191000669558039}"
+hinge_high_q75__median_vpd_sm_interaction,median_vpd_sm_interaction,hinge_high,,"{'q': 0.75, 'cut': 0.5191000669558039}"
+high_tail_q90__median_vpd_sm_interaction,median_vpd_sm_interaction,high_tail,,"{'q': 0.9, 'cut': 1.048286993840083}"
+hinge_high_q90__median_vpd_sm_interaction,median_vpd_sm_interaction,hinge_high,,"{'q': 0.9, 'cut': 1.048286993840083}"
+interaction_with_mean_annual_temperature__median_vpd_sm_interaction,median_vpd_sm_interaction,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__median_vpd_sm_interaction,median_vpd_sm_interaction,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_vpd_sm_interaction,median_vpd_sm_interaction,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_vpd_sm_interaction,median_vpd_sm_interaction,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,linear,,{}
+quadratic__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,quadratic,,{}
+low_tail_q10__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,low_tail,,"{'q': 0.1, 'cut': -1.0099514892384998}"
+hinge_low_q10__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,hinge_low,,"{'q': 0.1, 'cut': -1.0099514892384998}"
+low_tail_q25__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,low_tail,,"{'q': 0.25, 'cut': -0.4641874391307307}"
+hinge_low_q25__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,hinge_low,,"{'q': 0.25, 'cut': -0.4641874391307307}"
+high_tail_q75__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,high_tail,,"{'q': 0.75, 'cut': 0.4715014897081793}"
+hinge_high_q75__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,hinge_high,,"{'q': 0.75, 'cut': 0.4715014897081793}"
+high_tail_q90__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,high_tail,,"{'q': 0.9, 'cut': 1.0995224980577858}"
+hinge_high_q90__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,hinge_high,,"{'q': 0.9, 'cut': 1.0995224980577858}"
+interaction_with_mean_annual_temperature__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_vpd_sm_interaction_all,median_vpd_sm_interaction_all,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__n_vpd,n_vpd,linear,,{}
+quadratic__n_vpd,n_vpd,quadratic,,{}
+low_tail_q10__n_vpd,n_vpd,low_tail,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+hinge_low_q10__n_vpd,n_vpd,hinge_low,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+low_tail_q25__n_vpd,n_vpd,low_tail,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+hinge_low_q25__n_vpd,n_vpd,hinge_low,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+high_tail_q75__n_vpd,n_vpd,high_tail,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+hinge_high_q75__n_vpd,n_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+high_tail_q90__n_vpd,n_vpd,high_tail,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+hinge_high_q90__n_vpd,n_vpd,hinge_high,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+interaction_with_mean_annual_temperature__n_vpd,n_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__n_vpd,n_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__n_vpd,n_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__n_vpd,n_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p10_vpd,p10_vpd,linear,,{}
+quadratic__p10_vpd,p10_vpd,quadratic,,{}
+low_tail_q10__p10_vpd,p10_vpd,low_tail,,"{'q': 0.1, 'cut': -0.8979690181254352}"
+hinge_low_q10__p10_vpd,p10_vpd,hinge_low,,"{'q': 0.1, 'cut': -0.8979690181254352}"
+low_tail_q25__p10_vpd,p10_vpd,low_tail,,"{'q': 0.25, 'cut': -0.8246059573194423}"
+hinge_low_q25__p10_vpd,p10_vpd,hinge_low,,"{'q': 0.25, 'cut': -0.8246059573194423}"
+high_tail_q75__p10_vpd,p10_vpd,high_tail,,"{'q': 0.75, 'cut': 0.508594828431225}"
+hinge_high_q75__p10_vpd,p10_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.508594828431225}"
+high_tail_q90__p10_vpd,p10_vpd,high_tail,,"{'q': 0.9, 'cut': 1.175784309564304}"
+hinge_high_q90__p10_vpd,p10_vpd,hinge_high,,"{'q': 0.9, 'cut': 1.175784309564304}"
+interaction_with_mean_annual_temperature__p10_vpd,p10_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__p10_vpd,p10_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p10_vpd,p10_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p10_vpd,p10_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p90_vpd,p90_vpd,linear,,{}
+quadratic__p90_vpd,p90_vpd,quadratic,,{}
+low_tail_q10__p90_vpd,p90_vpd,low_tail,,"{'q': 0.1, 'cut': -1.159212299894862}"
+hinge_low_q10__p90_vpd,p90_vpd,hinge_low,,"{'q': 0.1, 'cut': -1.159212299894862}"
+low_tail_q25__p90_vpd,p90_vpd,low_tail,,"{'q': 0.25, 'cut': -0.749843506569632}"
+hinge_low_q25__p90_vpd,p90_vpd,hinge_low,,"{'q': 0.25, 'cut': -0.749843506569632}"
+high_tail_q75__p90_vpd,p90_vpd,high_tail,,"{'q': 0.75, 'cut': 0.5334638244367189}"
+hinge_high_q75__p90_vpd,p90_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.5334638244367189}"
+high_tail_q90__p90_vpd,p90_vpd,high_tail,,"{'q': 0.9, 'cut': 1.7745430556908461}"
+hinge_high_q90__p90_vpd,p90_vpd,hinge_high,,"{'q': 0.9, 'cut': 1.7745430556908461}"
+interaction_with_mean_annual_temperature__p90_vpd,p90_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__p90_vpd,p90_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p90_vpd,p90_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p90_vpd,p90_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__sd_vpd,sd_vpd,linear,,{}
+quadratic__sd_vpd,sd_vpd,quadratic,,{}
+low_tail_q10__sd_vpd,sd_vpd,low_tail,,"{'q': 0.1, 'cut': -1.1425717391728436}"
+hinge_low_q10__sd_vpd,sd_vpd,hinge_low,,"{'q': 0.1, 'cut': -1.1425717391728436}"
+low_tail_q25__sd_vpd,sd_vpd,low_tail,,"{'q': 0.25, 'cut': -0.842234022174678}"
+hinge_low_q25__sd_vpd,sd_vpd,hinge_low,,"{'q': 0.25, 'cut': -0.842234022174678}"
+high_tail_q75__sd_vpd,sd_vpd,high_tail,,"{'q': 0.75, 'cut': 0.5267933351067694}"
+hinge_high_q75__sd_vpd,sd_vpd,hinge_high,,"{'q': 0.75, 'cut': 0.5267933351067694}"
+high_tail_q90__sd_vpd,sd_vpd,high_tail,,"{'q': 0.9, 'cut': 1.638568423930836}"
+hinge_high_q90__sd_vpd,sd_vpd,hinge_high,,"{'q': 0.9, 'cut': 1.638568423930836}"
+interaction_with_mean_annual_temperature__sd_vpd,sd_vpd,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_soil_moisture__sd_vpd,sd_vpd,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__sd_vpd,sd_vpd,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__sd_vpd,sd_vpd,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__c4_fraction,c4_fraction,linear,,{}
+quadratic__c4_fraction,c4_fraction,quadratic,,{}
+low_tail_q10__c4_fraction,c4_fraction,low_tail,,"{'q': 0.1, 'cut': -1.489196405069682}"
+hinge_low_q10__c4_fraction,c4_fraction,hinge_low,,"{'q': 0.1, 'cut': -1.489196405069682}"
+low_tail_q25__c4_fraction,c4_fraction,low_tail,,"{'q': 0.25, 'cut': -0.6848844458329245}"
+hinge_low_q25__c4_fraction,c4_fraction,hinge_low,,"{'q': 0.25, 'cut': -0.6848844458329245}"
+high_tail_q75__c4_fraction,c4_fraction,high_tail,,"{'q': 0.75, 'cut': 0.6876402950929283}"
+hinge_high_q75__c4_fraction,c4_fraction,hinge_high,,"{'q': 0.75, 'cut': 0.6876402950929283}"
+high_tail_q90__c4_fraction,c4_fraction,high_tail,,"{'q': 0.9, 'cut': 1.3408432457210526}"
+hinge_high_q90__c4_fraction,c4_fraction,hinge_high,,"{'q': 0.9, 'cut': 1.3408432457210526}"
+interaction_with_mean_annual_temperature__c4_fraction,c4_fraction,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__c4_fraction,c4_fraction,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__c4_fraction,c4_fraction,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__c4_fraction,c4_fraction,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__c4_fraction,c4_fraction,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__c4_fraction_raw,c4_fraction_raw,linear,,{}
+quadratic__c4_fraction_raw,c4_fraction_raw,quadratic,,{}
+low_tail_q10__c4_fraction_raw,c4_fraction_raw,low_tail,,"{'q': 0.1, 'cut': -1.4891964050696822}"
+hinge_low_q10__c4_fraction_raw,c4_fraction_raw,hinge_low,,"{'q': 0.1, 'cut': -1.4891964050696822}"
+low_tail_q25__c4_fraction_raw,c4_fraction_raw,low_tail,,"{'q': 0.25, 'cut': -0.6848844458329244}"
+hinge_low_q25__c4_fraction_raw,c4_fraction_raw,hinge_low,,"{'q': 0.25, 'cut': -0.6848844458329244}"
+high_tail_q75__c4_fraction_raw,c4_fraction_raw,high_tail,,"{'q': 0.75, 'cut': 0.6876402950929282}"
+hinge_high_q75__c4_fraction_raw,c4_fraction_raw,hinge_high,,"{'q': 0.75, 'cut': 0.6876402950929282}"
+high_tail_q90__c4_fraction_raw,c4_fraction_raw,high_tail,,"{'q': 0.9, 'cut': 1.3408432457210528}"
+hinge_high_q90__c4_fraction_raw,c4_fraction_raw,hinge_high,,"{'q': 0.9, 'cut': 1.3408432457210528}"
+interaction_with_mean_annual_temperature__c4_fraction_raw,c4_fraction_raw,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__c4_fraction_raw,c4_fraction_raw,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__c4_fraction_raw,c4_fraction_raw,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__c4_fraction_raw,c4_fraction_raw,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__c4_fraction_raw,c4_fraction_raw,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__growing_season_mean_lai,growing_season_mean_lai,linear,,{}
+quadratic__growing_season_mean_lai,growing_season_mean_lai,quadratic,,{}
+low_tail_q10__growing_season_mean_lai,growing_season_mean_lai,low_tail,,"{'q': 0.1, 'cut': -1.1166169677216986}"
+hinge_low_q10__growing_season_mean_lai,growing_season_mean_lai,hinge_low,,"{'q': 0.1, 'cut': -1.1166169677216986}"
+low_tail_q25__growing_season_mean_lai,growing_season_mean_lai,low_tail,,"{'q': 0.25, 'cut': -0.7756701011765046}"
+hinge_low_q25__growing_season_mean_lai,growing_season_mean_lai,hinge_low,,"{'q': 0.25, 'cut': -0.7756701011765046}"
+high_tail_q75__growing_season_mean_lai,growing_season_mean_lai,high_tail,,"{'q': 0.75, 'cut': 0.614477617816706}"
+hinge_high_q75__growing_season_mean_lai,growing_season_mean_lai,hinge_high,,"{'q': 0.75, 'cut': 0.614477617816706}"
+high_tail_q90__growing_season_mean_lai,growing_season_mean_lai,high_tail,,"{'q': 0.9, 'cut': 1.34882948275097}"
+hinge_high_q90__growing_season_mean_lai,growing_season_mean_lai,hinge_high,,"{'q': 0.9, 'cut': 1.34882948275097}"
+interaction_with_mean_annual_temperature__growing_season_mean_lai,growing_season_mean_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__growing_season_mean_lai,growing_season_mean_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__growing_season_mean_lai,growing_season_mean_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__growing_season_mean_lai,growing_season_mean_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__growing_season_mean_lai,growing_season_mean_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__lai,lai,linear,,{}
+quadratic__lai,lai,quadratic,,{}
+low_tail_q10__lai,lai,low_tail,,"{'q': 0.1, 'cut': -1.1166169677216986}"
+hinge_low_q10__lai,lai,hinge_low,,"{'q': 0.1, 'cut': -1.1166169677216986}"
+low_tail_q25__lai,lai,low_tail,,"{'q': 0.25, 'cut': -0.7756701011765046}"
+hinge_low_q25__lai,lai,hinge_low,,"{'q': 0.25, 'cut': -0.7756701011765046}"
+high_tail_q75__lai,lai,high_tail,,"{'q': 0.75, 'cut': 0.614477617816706}"
+hinge_high_q75__lai,lai,hinge_high,,"{'q': 0.75, 'cut': 0.614477617816706}"
+high_tail_q90__lai,lai,high_tail,,"{'q': 0.9, 'cut': 1.34882948275097}"
+hinge_high_q90__lai,lai,hinge_high,,"{'q': 0.9, 'cut': 1.34882948275097}"
+interaction_with_mean_annual_temperature__lai,lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__lai,lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__lai,lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__lai,lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__lai,lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__mean_lai,mean_lai,linear,,{}
+quadratic__mean_lai,mean_lai,quadratic,,{}
+low_tail_q10__mean_lai,mean_lai,low_tail,,"{'q': 0.1, 'cut': -0.9993988882668958}"
+hinge_low_q10__mean_lai,mean_lai,hinge_low,,"{'q': 0.1, 'cut': -0.9993988882668958}"
+low_tail_q25__mean_lai,mean_lai,low_tail,,"{'q': 0.25, 'cut': -0.7276468265179551}"
+hinge_low_q25__mean_lai,mean_lai,hinge_low,,"{'q': 0.25, 'cut': -0.7276468265179551}"
+high_tail_q75__mean_lai,mean_lai,high_tail,,"{'q': 0.75, 'cut': 0.5993121889188314}"
+hinge_high_q75__mean_lai,mean_lai,hinge_high,,"{'q': 0.75, 'cut': 0.5993121889188314}"
+high_tail_q90__mean_lai,mean_lai,high_tail,,"{'q': 0.9, 'cut': 1.2722789027455519}"
+hinge_high_q90__mean_lai,mean_lai,hinge_high,,"{'q': 0.9, 'cut': 1.2722789027455519}"
+interaction_with_mean_annual_temperature__mean_lai,mean_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__mean_lai,mean_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mean_lai,mean_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_lai,mean_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_lai,mean_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_lai,median_lai,linear,,{}
+quadratic__median_lai,median_lai,quadratic,,{}
+low_tail_q10__median_lai,median_lai,low_tail,,"{'q': 0.1, 'cut': -0.8880105585704446}"
+hinge_low_q10__median_lai,median_lai,hinge_low,,"{'q': 0.1, 'cut': -0.8880105585704446}"
+low_tail_q25__median_lai,median_lai,low_tail,,"{'q': 0.25, 'cut': -0.6777617767078408}"
+hinge_low_q25__median_lai,median_lai,hinge_low,,"{'q': 0.25, 'cut': -0.6777617767078408}"
+high_tail_q75__median_lai,median_lai,high_tail,,"{'q': 0.75, 'cut': 0.5837309144677816}"
+hinge_high_q75__median_lai,median_lai,hinge_high,,"{'q': 0.75, 'cut': 0.5837309144677816}"
+high_tail_q90__median_lai,median_lai,high_tail,,"{'q': 0.9, 'cut': 1.2144772600555929}"
+hinge_high_q90__median_lai,median_lai,hinge_high,,"{'q': 0.9, 'cut': 1.2144772600555929}"
+interaction_with_mean_annual_temperature__median_lai,median_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__median_lai,median_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__median_lai,median_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_lai,median_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_lai,median_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__n_lai,n_lai,linear,,{}
+quadratic__n_lai,n_lai,quadratic,,{}
+low_tail_q10__n_lai,n_lai,low_tail,,"{'q': 0.1, 'cut': -1.0876776285798493}"
+hinge_low_q10__n_lai,n_lai,hinge_low,,"{'q': 0.1, 'cut': -1.0876776285798493}"
+low_tail_q25__n_lai,n_lai,low_tail,,"{'q': 0.25, 'cut': 0.30556533479627135}"
+hinge_low_q25__n_lai,n_lai,hinge_low,,"{'q': 0.25, 'cut': 0.30556533479627135}"
+high_tail_q75__n_lai,n_lai,high_tail,,"{'q': 0.75, 'cut': 0.32654790954591173}"
+hinge_high_q75__n_lai,n_lai,hinge_high,,"{'q': 0.75, 'cut': 0.32654790954591173}"
+high_tail_q90__n_lai,n_lai,high_tail,,"{'q': 0.9, 'cut': 0.3894956337948328}"
+hinge_high_q90__n_lai,n_lai,hinge_high,,"{'q': 0.9, 'cut': 0.3894956337948328}"
+interaction_with_mean_annual_temperature__n_lai,n_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__n_lai,n_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__n_lai,n_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__n_lai,n_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__n_lai,n_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p10_lai,p10_lai,linear,,{}
+quadratic__p10_lai,p10_lai,quadratic,,{}
+low_tail_q10__p10_lai,p10_lai,low_tail,,"{'q': 0.1, 'cut': -0.9132918018054884}"
+hinge_low_q10__p10_lai,p10_lai,hinge_low,,"{'q': 0.1, 'cut': -0.9132918018054884}"
+low_tail_q25__p10_lai,p10_lai,low_tail,,"{'q': 0.25, 'cut': -0.9132918018054884}"
+hinge_low_q25__p10_lai,p10_lai,hinge_low,,"{'q': 0.25, 'cut': -0.9132918018054884}"
+high_tail_q75__p10_lai,p10_lai,high_tail,,"{'q': 0.75, 'cut': 0.4106569766267987}"
+hinge_high_q75__p10_lai,p10_lai,hinge_high,,"{'q': 0.75, 'cut': 0.4106569766267987}"
+high_tail_q90__p10_lai,p10_lai,high_tail,,"{'q': 0.9, 'cut': 1.403618560451014}"
+hinge_high_q90__p10_lai,p10_lai,hinge_high,,"{'q': 0.9, 'cut': 1.403618560451014}"
+interaction_with_mean_annual_temperature__p10_lai,p10_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p10_lai,p10_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p10_lai,p10_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p10_lai,p10_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p10_lai,p10_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p90_lai,p90_lai,linear,,{}
+quadratic__p90_lai,p90_lai,quadratic,,{}
+low_tail_q10__p90_lai,p90_lai,low_tail,,"{'q': 0.1, 'cut': -1.1115705080999896}"
+hinge_low_q10__p90_lai,p90_lai,hinge_low,,"{'q': 0.1, 'cut': -1.1115705080999896}"
+low_tail_q25__p90_lai,p90_lai,low_tail,,"{'q': 0.25, 'cut': -0.6872265841397516}"
+hinge_low_q25__p90_lai,p90_lai,hinge_low,,"{'q': 0.25, 'cut': -0.6872265841397516}"
+high_tail_q75__p90_lai,p90_lai,high_tail,,"{'q': 0.75, 'cut': 0.6388481782359927}"
+hinge_high_q75__p90_lai,p90_lai,hinge_high,,"{'q': 0.75, 'cut': 0.6388481782359927}"
+high_tail_q90__p90_lai,p90_lai,high_tail,,"{'q': 0.9, 'cut': 1.3018855594238647}"
+hinge_high_q90__p90_lai,p90_lai,hinge_high,,"{'q': 0.9, 'cut': 1.3018855594238647}"
+interaction_with_mean_annual_temperature__p90_lai,p90_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p90_lai,p90_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p90_lai,p90_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p90_lai,p90_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p90_lai,p90_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__sd_lai,sd_lai,linear,,{}
+quadratic__sd_lai,sd_lai,quadratic,,{}
+low_tail_q10__sd_lai,sd_lai,low_tail,,"{'q': 0.1, 'cut': -1.114680133448908}"
+hinge_low_q10__sd_lai,sd_lai,hinge_low,,"{'q': 0.1, 'cut': -1.114680133448908}"
+low_tail_q25__sd_lai,sd_lai,low_tail,,"{'q': 0.25, 'cut': -0.7317773122192084}"
+hinge_low_q25__sd_lai,sd_lai,hinge_low,,"{'q': 0.25, 'cut': -0.7317773122192084}"
+high_tail_q75__sd_lai,sd_lai,high_tail,,"{'q': 0.75, 'cut': 0.5292052072444009}"
+hinge_high_q75__sd_lai,sd_lai,hinge_high,,"{'q': 0.75, 'cut': 0.5292052072444009}"
+high_tail_q90__sd_lai,sd_lai,high_tail,,"{'q': 0.9, 'cut': 1.2664585910234485}"
+hinge_high_q90__sd_lai,sd_lai,hinge_high,,"{'q': 0.9, 'cut': 1.2664585910234485}"
+interaction_with_mean_annual_temperature__sd_lai,sd_lai,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__sd_lai,sd_lai,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__sd_lai,sd_lai,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__sd_lai,sd_lai,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__sd_lai,sd_lai,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__full_trait_with_isohydricity_ready,full_trait_with_isohydricity_ready,linear,,{}
+linear__isohydricity_available,isohydricity_available,linear,,{}
+linear__p50,p50,linear,,{}
+quadratic__p50,p50,quadratic,,{}
+low_tail_q10__p50,p50,low_tail,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+hinge_low_q10__p50,p50,hinge_low,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+low_tail_q25__p50,p50,low_tail,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+hinge_low_q25__p50,p50,hinge_low,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+high_tail_q75__p50,p50,high_tail,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+hinge_high_q75__p50,p50,hinge_high,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+high_tail_q90__p50,p50,high_tail,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+hinge_high_q90__p50,p50,hinge_high,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+interaction_with_mean_annual_temperature__p50,p50,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p50,p50,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p50,p50,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p50,p50,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p50,p50,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__psi50,psi50,linear,,{}
+quadratic__psi50,psi50,quadratic,,{}
+low_tail_q10__psi50,psi50,low_tail,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+hinge_low_q10__psi50,psi50,hinge_low,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+low_tail_q25__psi50,psi50,low_tail,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+hinge_low_q25__psi50,psi50,hinge_low,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+high_tail_q75__psi50,psi50,high_tail,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+hinge_high_q75__psi50,psi50,hinge_high,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+high_tail_q90__psi50,psi50,high_tail,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+hinge_high_q90__psi50,psi50,hinge_high,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+interaction_with_mean_annual_temperature__psi50,psi50,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__psi50,psi50,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__psi50,psi50,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__psi50,psi50,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__psi50,psi50,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__trait_psi50,trait_psi50,linear,,{}
+quadratic__trait_psi50,trait_psi50,quadratic,,{}
+low_tail_q10__trait_psi50,trait_psi50,low_tail,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+hinge_low_q10__trait_psi50,trait_psi50,hinge_low,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+low_tail_q25__trait_psi50,trait_psi50,low_tail,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+hinge_low_q25__trait_psi50,trait_psi50,hinge_low,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+high_tail_q75__trait_psi50,trait_psi50,high_tail,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+hinge_high_q75__trait_psi50,trait_psi50,hinge_high,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+high_tail_q90__trait_psi50,trait_psi50,high_tail,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+hinge_high_q90__trait_psi50,trait_psi50,hinge_high,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+interaction_with_mean_annual_temperature__trait_psi50,trait_psi50,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__trait_psi50,trait_psi50,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__trait_psi50,trait_psi50,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__trait_psi50,trait_psi50,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__trait_psi50,trait_psi50,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__xylem_vulnerability_p50,xylem_vulnerability_p50,linear,,{}
+quadratic__xylem_vulnerability_p50,xylem_vulnerability_p50,quadratic,,{}
+low_tail_q10__xylem_vulnerability_p50,xylem_vulnerability_p50,low_tail,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+hinge_low_q10__xylem_vulnerability_p50,xylem_vulnerability_p50,hinge_low,,"{'q': 0.1, 'cut': -0.9047412484688263}"
+low_tail_q25__xylem_vulnerability_p50,xylem_vulnerability_p50,low_tail,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+hinge_low_q25__xylem_vulnerability_p50,xylem_vulnerability_p50,hinge_low,,"{'q': 0.25, 'cut': -0.6877223977346613}"
+high_tail_q75__xylem_vulnerability_p50,xylem_vulnerability_p50,high_tail,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+hinge_high_q75__xylem_vulnerability_p50,xylem_vulnerability_p50,hinge_high,,"{'q': 0.75, 'cut': 0.33887367799091633}"
+high_tail_q90__xylem_vulnerability_p50,xylem_vulnerability_p50,high_tail,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+hinge_high_q90__xylem_vulnerability_p50,xylem_vulnerability_p50,hinge_high,,"{'q': 0.9, 'cut': 1.1867674374239472}"
+interaction_with_mean_annual_temperature__xylem_vulnerability_p50,xylem_vulnerability_p50,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__xylem_vulnerability_p50,xylem_vulnerability_p50,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__xylem_vulnerability_p50,xylem_vulnerability_p50,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__xylem_vulnerability_p50,xylem_vulnerability_p50,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__xylem_vulnerability_p50,xylem_vulnerability_p50,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__core_trait_climate_model_ready,core_trait_climate_model_ready,linear,,{}
+linear__core_trait_climate_soil_model_ready,core_trait_climate_soil_model_ready,linear,,{}
+linear__env_hydroclimatic_regime_other,env_hydroclimatic_regime_other,linear,,{}
+linear__env_hydroclimatic_regime_russian_steppe_west_secondary,env_hydroclimatic_regime_russian_steppe_west_secondary,linear,,{}
+linear__mean_annual_precipitation,mean_annual_precipitation,linear,,{}
+quadratic__mean_annual_precipitation,mean_annual_precipitation,quadratic,,{}
+low_tail_q10__mean_annual_precipitation,mean_annual_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.8822126077208092}"
+hinge_low_q10__mean_annual_precipitation,mean_annual_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.8822126077208092}"
+low_tail_q25__mean_annual_precipitation,mean_annual_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.6373989620846015}"
+hinge_low_q25__mean_annual_precipitation,mean_annual_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.6373989620846015}"
+high_tail_q75__mean_annual_precipitation,mean_annual_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.37702303971878753}"
+hinge_high_q75__mean_annual_precipitation,mean_annual_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.37702303971878753}"
+high_tail_q90__mean_annual_precipitation,mean_annual_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.1262225959751175}"
+hinge_high_q90__mean_annual_precipitation,mean_annual_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.1262225959751175}"
+interaction_with_mean_annual_temperature__mean_annual_precipitation,mean_annual_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__mean_annual_precipitation,mean_annual_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mean_annual_precipitation,mean_annual_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_annual_precipitation,mean_annual_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__mean_precipitation,mean_precipitation,linear,,{}
+quadratic__mean_precipitation,mean_precipitation,quadratic,,{}
+low_tail_q10__mean_precipitation,mean_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.8813843937970262}"
+hinge_low_q10__mean_precipitation,mean_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.8813843937970262}"
+low_tail_q25__mean_precipitation,mean_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.6366583321661069}"
+hinge_low_q25__mean_precipitation,mean_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.6366583321661069}"
+high_tail_q75__mean_precipitation,mean_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.3810773518530406}"
+hinge_high_q75__mean_precipitation,mean_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.3810773518530406}"
+high_tail_q90__mean_precipitation,mean_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.1306195399392565}"
+hinge_high_q90__mean_precipitation,mean_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.1306195399392565}"
+interaction_with_mean_annual_temperature__mean_precipitation,mean_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__mean_precipitation,mean_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mean_precipitation,mean_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_precipitation,mean_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__median_precipitation,median_precipitation,linear,,{}
+quadratic__median_precipitation,median_precipitation,quadratic,,{}
+low_tail_q10__median_precipitation,median_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.8863131857512361}"
+hinge_low_q10__median_precipitation,median_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.8863131857512361}"
+low_tail_q25__median_precipitation,median_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.644741718336804}"
+hinge_low_q25__median_precipitation,median_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.644741718336804}"
+high_tail_q75__median_precipitation,median_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.23979494765898912}"
+hinge_high_q75__median_precipitation,median_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.23979494765898912}"
+high_tail_q90__median_precipitation,median_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.3207756828418822}"
+hinge_high_q90__median_precipitation,median_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.3207756828418822}"
+interaction_with_mean_annual_temperature__median_precipitation,median_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__median_precipitation,median_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__median_precipitation,median_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_precipitation,median_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__n_precipitation,n_precipitation,linear,,{}
+quadratic__n_precipitation,n_precipitation,quadratic,,{}
+low_tail_q10__n_precipitation,n_precipitation,low_tail,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+hinge_low_q10__n_precipitation,n_precipitation,hinge_low,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+low_tail_q25__n_precipitation,n_precipitation,low_tail,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+hinge_low_q25__n_precipitation,n_precipitation,hinge_low,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+high_tail_q75__n_precipitation,n_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+hinge_high_q75__n_precipitation,n_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+high_tail_q90__n_precipitation,n_precipitation,high_tail,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+hinge_high_q90__n_precipitation,n_precipitation,hinge_high,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+interaction_with_mean_annual_temperature__n_precipitation,n_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__n_precipitation,n_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__n_precipitation,n_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__n_precipitation,n_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__p10_precipitation,p10_precipitation,linear,,{}
+quadratic__p10_precipitation,p10_precipitation,quadratic,,{}
+low_tail_q10__p10_precipitation,p10_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.6001724185533596}"
+hinge_low_q10__p10_precipitation,p10_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.6001724185533596}"
+low_tail_q25__p10_precipitation,p10_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.5974606170305758}"
+hinge_low_q25__p10_precipitation,p10_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.5974606170305758}"
+high_tail_q75__p10_precipitation,p10_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.11176932626575437}"
+hinge_high_q75__p10_precipitation,p10_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.11176932626575437}"
+high_tail_q90__p10_precipitation,p10_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.1533909000065854}"
+hinge_high_q90__p10_precipitation,p10_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.1533909000065854}"
+interaction_with_mean_annual_temperature__p10_precipitation,p10_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p10_precipitation,p10_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p10_precipitation,p10_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p10_precipitation,p10_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__p90_precipitation,p90_precipitation,linear,,{}
+quadratic__p90_precipitation,p90_precipitation,quadratic,,{}
+low_tail_q10__p90_precipitation,p90_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.8926833286259195}"
+hinge_low_q10__p90_precipitation,p90_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.8926833286259195}"
+low_tail_q25__p90_precipitation,p90_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.6697262501557254}"
+hinge_low_q25__p90_precipitation,p90_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.6697262501557254}"
+high_tail_q75__p90_precipitation,p90_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.43184205770020156}"
+hinge_high_q75__p90_precipitation,p90_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.43184205770020156}"
+high_tail_q90__p90_precipitation,p90_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.0290677462499327}"
+hinge_high_q90__p90_precipitation,p90_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.0290677462499327}"
+interaction_with_mean_annual_temperature__p90_precipitation,p90_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__p90_precipitation,p90_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p90_precipitation,p90_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p90_precipitation,p90_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__sd_precipitation,sd_precipitation,linear,,{}
+quadratic__sd_precipitation,sd_precipitation,quadratic,,{}
+low_tail_q10__sd_precipitation,sd_precipitation,low_tail,,"{'q': 0.1, 'cut': -0.8410916600655712}"
+hinge_low_q10__sd_precipitation,sd_precipitation,hinge_low,,"{'q': 0.1, 'cut': -0.8410916600655712}"
+low_tail_q25__sd_precipitation,sd_precipitation,low_tail,,"{'q': 0.25, 'cut': -0.6805981032431434}"
+hinge_low_q25__sd_precipitation,sd_precipitation,hinge_low,,"{'q': 0.25, 'cut': -0.6805981032431434}"
+high_tail_q75__sd_precipitation,sd_precipitation,high_tail,,"{'q': 0.75, 'cut': 0.44142092028215535}"
+hinge_high_q75__sd_precipitation,sd_precipitation,hinge_high,,"{'q': 0.75, 'cut': 0.44142092028215535}"
+high_tail_q90__sd_precipitation,sd_precipitation,high_tail,,"{'q': 0.9, 'cut': 1.132342359231862}"
+hinge_high_q90__sd_precipitation,sd_precipitation,hinge_high,,"{'q': 0.9, 'cut': 1.132342359231862}"
+interaction_with_mean_annual_temperature__sd_precipitation,sd_precipitation,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__sd_precipitation,sd_precipitation,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__sd_precipitation,sd_precipitation,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__sd_precipitation,sd_precipitation,interaction,aridity,{'moderator_family': 'aridity'}
+linear__in_lean_no_rooting_depth_complete_case,_in_lean_no_rooting_depth_complete_case,linear,,{}
+linear__rooting_depth,rooting_depth,linear,,{}
+quadratic__rooting_depth,rooting_depth,quadratic,,{}
+low_tail_q10__rooting_depth,rooting_depth,low_tail,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+hinge_low_q10__rooting_depth,rooting_depth,hinge_low,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+low_tail_q25__rooting_depth,rooting_depth,low_tail,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+hinge_low_q25__rooting_depth,rooting_depth,hinge_low,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+high_tail_q75__rooting_depth,rooting_depth,high_tail,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+hinge_high_q75__rooting_depth,rooting_depth,hinge_high,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+high_tail_q90__rooting_depth,rooting_depth,high_tail,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+hinge_high_q90__rooting_depth,rooting_depth,hinge_high,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+interaction_with_mean_annual_temperature__rooting_depth,rooting_depth,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__rooting_depth,rooting_depth,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__rooting_depth,rooting_depth,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__rooting_depth,rooting_depth,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__rooting_depth,rooting_depth,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,linear,,{}
+quadratic__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,quadratic,,{}
+low_tail_q10__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,low_tail,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+hinge_low_q10__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,hinge_low,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+low_tail_q25__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,low_tail,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+hinge_low_q25__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,hinge_low,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+high_tail_q75__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,high_tail,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+hinge_high_q75__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,hinge_high,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+high_tail_q90__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,high_tail,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+hinge_high_q90__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,hinge_high,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+interaction_with_mean_annual_temperature__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__rooting_zone_storage_rooting_depth,rooting_zone_storage_rooting_depth,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__trait_rooting_depth,trait_rooting_depth,linear,,{}
+quadratic__trait_rooting_depth,trait_rooting_depth,quadratic,,{}
+low_tail_q10__trait_rooting_depth,trait_rooting_depth,low_tail,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+hinge_low_q10__trait_rooting_depth,trait_rooting_depth,hinge_low,,"{'q': 0.1, 'cut': -0.9331796906960925}"
+low_tail_q25__trait_rooting_depth,trait_rooting_depth,low_tail,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+hinge_low_q25__trait_rooting_depth,trait_rooting_depth,hinge_low,,"{'q': 0.25, 'cut': -0.8990714207110443}"
+high_tail_q75__trait_rooting_depth,trait_rooting_depth,high_tail,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+hinge_high_q75__trait_rooting_depth,trait_rooting_depth,hinge_high,,"{'q': 0.75, 'cut': 0.6064448682818913}"
+high_tail_q90__trait_rooting_depth,trait_rooting_depth,high_tail,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+hinge_high_q90__trait_rooting_depth,trait_rooting_depth,hinge_high,,"{'q': 0.9, 'cut': 1.6249602438357833}"
+interaction_with_mean_annual_temperature__trait_rooting_depth,trait_rooting_depth,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__trait_rooting_depth,trait_rooting_depth,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__trait_rooting_depth,trait_rooting_depth,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__trait_rooting_depth,trait_rooting_depth,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__trait_rooting_depth,trait_rooting_depth,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_clay,soil_clay,linear,,{}
+quadratic__soil_clay,soil_clay,quadratic,,{}
+low_tail_q10__soil_clay,soil_clay,low_tail,,"{'q': 0.1, 'cut': -1.115893833347894}"
+hinge_low_q10__soil_clay,soil_clay,hinge_low,,"{'q': 0.1, 'cut': -1.115893833347894}"
+low_tail_q25__soil_clay,soil_clay,low_tail,,"{'q': 0.25, 'cut': -0.6450395869379657}"
+hinge_low_q25__soil_clay,soil_clay,hinge_low,,"{'q': 0.25, 'cut': -0.6450395869379657}"
+high_tail_q75__soil_clay,soil_clay,high_tail,,"{'q': 0.75, 'cut': 0.5331710387818556}"
+hinge_high_q75__soil_clay,soil_clay,hinge_high,,"{'q': 0.75, 'cut': 0.5331710387818556}"
+high_tail_q90__soil_clay,soil_clay,high_tail,,"{'q': 0.9, 'cut': 1.1631267200517599}"
+hinge_high_q90__soil_clay,soil_clay,hinge_high,,"{'q': 0.9, 'cut': 1.1631267200517599}"
+interaction_with_mean_annual_temperature__soil_clay,soil_clay,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_clay,soil_clay,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_clay,soil_clay,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_clay,soil_clay,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_clay,soil_clay,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_clay_mean,soil_clay_mean,linear,,{}
+quadratic__soil_clay_mean,soil_clay_mean,quadratic,,{}
+low_tail_q10__soil_clay_mean,soil_clay_mean,low_tail,,"{'q': 0.1, 'cut': -1.115893833347894}"
+hinge_low_q10__soil_clay_mean,soil_clay_mean,hinge_low,,"{'q': 0.1, 'cut': -1.115893833347894}"
+low_tail_q25__soil_clay_mean,soil_clay_mean,low_tail,,"{'q': 0.25, 'cut': -0.6450395869379657}"
+hinge_low_q25__soil_clay_mean,soil_clay_mean,hinge_low,,"{'q': 0.25, 'cut': -0.6450395869379657}"
+high_tail_q75__soil_clay_mean,soil_clay_mean,high_tail,,"{'q': 0.75, 'cut': 0.5331710387818556}"
+hinge_high_q75__soil_clay_mean,soil_clay_mean,hinge_high,,"{'q': 0.75, 'cut': 0.5331710387818556}"
+high_tail_q90__soil_clay_mean,soil_clay_mean,high_tail,,"{'q': 0.9, 'cut': 1.1631267200517599}"
+hinge_high_q90__soil_clay_mean,soil_clay_mean,hinge_high,,"{'q': 0.9, 'cut': 1.1631267200517599}"
+interaction_with_mean_annual_temperature__soil_clay_mean,soil_clay_mean,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_clay_mean,soil_clay_mean,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_clay_mean,soil_clay_mean,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_clay_mean,soil_clay_mean,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_clay_mean,soil_clay_mean,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_sand,soil_sand,linear,,{}
+quadratic__soil_sand,soil_sand,quadratic,,{}
+low_tail_q10__soil_sand,soil_sand,low_tail,,"{'q': 0.1, 'cut': -1.2187335845321245}"
+hinge_low_q10__soil_sand,soil_sand,hinge_low,,"{'q': 0.1, 'cut': -1.2187335845321245}"
+low_tail_q25__soil_sand,soil_sand,low_tail,,"{'q': 0.25, 'cut': -0.7040303245635516}"
+hinge_low_q25__soil_sand,soil_sand,hinge_low,,"{'q': 0.25, 'cut': -0.7040303245635516}"
+high_tail_q75__soil_sand,soil_sand,high_tail,,"{'q': 0.75, 'cut': 0.7285820237116963}"
+hinge_high_q75__soil_sand,soil_sand,hinge_high,,"{'q': 0.75, 'cut': 0.7285820237116963}"
+high_tail_q90__soil_sand,soil_sand,high_tail,,"{'q': 0.9, 'cut': 1.3949736499682368}"
+hinge_high_q90__soil_sand,soil_sand,hinge_high,,"{'q': 0.9, 'cut': 1.3949736499682368}"
+interaction_with_mean_annual_temperature__soil_sand,soil_sand,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_sand,soil_sand,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_sand,soil_sand,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_sand,soil_sand,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_sand,soil_sand,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_sand_mean,soil_sand_mean,linear,,{}
+quadratic__soil_sand_mean,soil_sand_mean,quadratic,,{}
+low_tail_q10__soil_sand_mean,soil_sand_mean,low_tail,,"{'q': 0.1, 'cut': -1.2187335845321245}"
+hinge_low_q10__soil_sand_mean,soil_sand_mean,hinge_low,,"{'q': 0.1, 'cut': -1.2187335845321245}"
+low_tail_q25__soil_sand_mean,soil_sand_mean,low_tail,,"{'q': 0.25, 'cut': -0.7040303245635516}"
+hinge_low_q25__soil_sand_mean,soil_sand_mean,hinge_low,,"{'q': 0.25, 'cut': -0.7040303245635516}"
+high_tail_q75__soil_sand_mean,soil_sand_mean,high_tail,,"{'q': 0.75, 'cut': 0.7285820237116963}"
+hinge_high_q75__soil_sand_mean,soil_sand_mean,hinge_high,,"{'q': 0.75, 'cut': 0.7285820237116963}"
+high_tail_q90__soil_sand_mean,soil_sand_mean,high_tail,,"{'q': 0.9, 'cut': 1.3949736499682368}"
+hinge_high_q90__soil_sand_mean,soil_sand_mean,hinge_high,,"{'q': 0.9, 'cut': 1.3949736499682368}"
+interaction_with_mean_annual_temperature__soil_sand_mean,soil_sand_mean,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_sand_mean,soil_sand_mean,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_sand_mean,soil_sand_mean,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_sand_mean,soil_sand_mean,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_sand_mean,soil_sand_mean,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_silt,soil_silt,linear,,{}
+quadratic__soil_silt,soil_silt,quadratic,,{}
+low_tail_q10__soil_silt,soil_silt,low_tail,,"{'q': 0.1, 'cut': -1.408907324525168}"
+hinge_low_q10__soil_silt,soil_silt,hinge_low,,"{'q': 0.1, 'cut': -1.408907324525168}"
+low_tail_q25__soil_silt,soil_silt,low_tail,,"{'q': 0.25, 'cut': -0.7410897675040342}"
+hinge_low_q25__soil_silt,soil_silt,hinge_low,,"{'q': 0.25, 'cut': -0.7410897675040342}"
+high_tail_q75__soil_silt,soil_silt,high_tail,,"{'q': 0.75, 'cut': 0.7647415685945902}"
+hinge_high_q75__soil_silt,soil_silt,hinge_high,,"{'q': 0.75, 'cut': 0.7647415685945902}"
+high_tail_q90__soil_silt,soil_silt,high_tail,,"{'q': 0.9, 'cut': 1.3109903955754687}"
+hinge_high_q90__soil_silt,soil_silt,hinge_high,,"{'q': 0.9, 'cut': 1.3109903955754687}"
+interaction_with_mean_annual_temperature__soil_silt,soil_silt,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_silt,soil_silt,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_silt,soil_silt,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_silt,soil_silt,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_silt,soil_silt,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_silt_mean,soil_silt_mean,linear,,{}
+quadratic__soil_silt_mean,soil_silt_mean,quadratic,,{}
+low_tail_q10__soil_silt_mean,soil_silt_mean,low_tail,,"{'q': 0.1, 'cut': -1.408907324525168}"
+hinge_low_q10__soil_silt_mean,soil_silt_mean,hinge_low,,"{'q': 0.1, 'cut': -1.408907324525168}"
+low_tail_q25__soil_silt_mean,soil_silt_mean,low_tail,,"{'q': 0.25, 'cut': -0.7410897675040342}"
+hinge_low_q25__soil_silt_mean,soil_silt_mean,hinge_low,,"{'q': 0.25, 'cut': -0.7410897675040342}"
+high_tail_q75__soil_silt_mean,soil_silt_mean,high_tail,,"{'q': 0.75, 'cut': 0.7647415685945902}"
+hinge_high_q75__soil_silt_mean,soil_silt_mean,hinge_high,,"{'q': 0.75, 'cut': 0.7647415685945902}"
+high_tail_q90__soil_silt_mean,soil_silt_mean,high_tail,,"{'q': 0.9, 'cut': 1.3109903955754687}"
+hinge_high_q90__soil_silt_mean,soil_silt_mean,hinge_high,,"{'q': 0.9, 'cut': 1.3109903955754687}"
+interaction_with_mean_annual_temperature__soil_silt_mean,soil_silt_mean,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_silt_mean,soil_silt_mean,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_silt_mean,soil_silt_mean,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_silt_mean,soil_silt_mean,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_silt_mean,soil_silt_mean,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_texture_coarse_index,soil_texture_coarse_index,linear,,{}
+quadratic__soil_texture_coarse_index,soil_texture_coarse_index,quadratic,,{}
+low_tail_q10__soil_texture_coarse_index,soil_texture_coarse_index,low_tail,,"{'q': 0.1, 'cut': -1.2267470963745035}"
+hinge_low_q10__soil_texture_coarse_index,soil_texture_coarse_index,hinge_low,,"{'q': 0.1, 'cut': -1.2267470963745035}"
+low_tail_q25__soil_texture_coarse_index,soil_texture_coarse_index,low_tail,,"{'q': 0.25, 'cut': -0.6344692757350173}"
+hinge_low_q25__soil_texture_coarse_index,soil_texture_coarse_index,hinge_low,,"{'q': 0.25, 'cut': -0.6344692757350173}"
+high_tail_q75__soil_texture_coarse_index,soil_texture_coarse_index,high_tail,,"{'q': 0.75, 'cut': 0.638928038639879}"
+hinge_high_q75__soil_texture_coarse_index,soil_texture_coarse_index,hinge_high,,"{'q': 0.75, 'cut': 0.638928038639879}"
+high_tail_q90__soil_texture_coarse_index,soil_texture_coarse_index,high_tail,,"{'q': 0.9, 'cut': 1.237487593740693}"
+hinge_high_q90__soil_texture_coarse_index,soil_texture_coarse_index,hinge_high,,"{'q': 0.9, 'cut': 1.237487593740693}"
+interaction_with_mean_annual_temperature__soil_texture_coarse_index,soil_texture_coarse_index,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_texture_coarse_index,soil_texture_coarse_index,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_texture_coarse_index,soil_texture_coarse_index,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_texture_coarse_index,soil_texture_coarse_index,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_texture_coarse_index,soil_texture_coarse_index,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_texture_fine_index,soil_texture_fine_index,linear,,{}
+quadratic__soil_texture_fine_index,soil_texture_fine_index,quadratic,,{}
+low_tail_q10__soil_texture_fine_index,soil_texture_fine_index,low_tail,,"{'q': 0.1, 'cut': -1.3979312146354579}"
+hinge_low_q10__soil_texture_fine_index,soil_texture_fine_index,hinge_low,,"{'q': 0.1, 'cut': -1.3979312146354579}"
+low_tail_q25__soil_texture_fine_index,soil_texture_fine_index,low_tail,,"{'q': 0.25, 'cut': -0.7289280642537345}"
+hinge_low_q25__soil_texture_fine_index,soil_texture_fine_index,hinge_low,,"{'q': 0.25, 'cut': -0.7289280642537345}"
+high_tail_q75__soil_texture_fine_index,soil_texture_fine_index,high_tail,,"{'q': 0.75, 'cut': 0.7063170665070567}"
+hinge_high_q75__soil_texture_fine_index,soil_texture_fine_index,hinge_high,,"{'q': 0.75, 'cut': 0.7063170665070567}"
+high_tail_q90__soil_texture_fine_index,soil_texture_fine_index,high_tail,,"{'q': 0.9, 'cut': 1.218441571159732}"
+hinge_high_q90__soil_texture_fine_index,soil_texture_fine_index,hinge_high,,"{'q': 0.9, 'cut': 1.218441571159732}"
+interaction_with_mean_annual_temperature__soil_texture_fine_index,soil_texture_fine_index,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_texture_fine_index,soil_texture_fine_index,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_texture_fine_index,soil_texture_fine_index,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_texture_fine_index,soil_texture_fine_index,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_texture_fine_index,soil_texture_fine_index,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__soil_texture_pc1,soil_texture_pc1,linear,,{}
+quadratic__soil_texture_pc1,soil_texture_pc1,quadratic,,{}
+low_tail_q10__soil_texture_pc1,soil_texture_pc1,low_tail,,"{'q': 0.1, 'cut': -1.219660880918448}"
+hinge_low_q10__soil_texture_pc1,soil_texture_pc1,hinge_low,,"{'q': 0.1, 'cut': -1.219660880918448}"
+low_tail_q25__soil_texture_pc1,soil_texture_pc1,low_tail,,"{'q': 0.25, 'cut': -0.7061142253107464}"
+hinge_low_q25__soil_texture_pc1,soil_texture_pc1,hinge_low,,"{'q': 0.25, 'cut': -0.7061142253107464}"
+high_tail_q75__soil_texture_pc1,soil_texture_pc1,high_tail,,"{'q': 0.75, 'cut': 0.728298393035159}"
+hinge_high_q75__soil_texture_pc1,soil_texture_pc1,hinge_high,,"{'q': 0.75, 'cut': 0.728298393035159}"
+high_tail_q90__soil_texture_pc1,soil_texture_pc1,high_tail,,"{'q': 0.9, 'cut': 1.3949793766272773}"
+hinge_high_q90__soil_texture_pc1,soil_texture_pc1,hinge_high,,"{'q': 0.9, 'cut': 1.3949793766272773}"
+interaction_with_mean_annual_temperature__soil_texture_pc1,soil_texture_pc1,interaction,mean_annual_temperature,{'moderator_family': 'temperature'}
+interaction_with_mean_vpd__soil_texture_pc1,soil_texture_pc1,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__soil_texture_pc1,soil_texture_pc1,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__soil_texture_pc1,soil_texture_pc1,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__soil_texture_pc1,soil_texture_pc1,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__env_eco_biome_temperate_grasslands_savannas_shrublands,"env_eco_biome_Temperate_Grasslands,_Savannas_&_Shrublands",linear,,{}
+linear__lc11_point_geography_all199_i_env_eco_biome_temperate_grasslands_savannas_shrublands,lc11_point_geography_all199_i__env_eco_biome_temperate_grasslands_savannas_shrublands,linear,,{}
+linear__mat,mat,linear,,{}
+quadratic__mat,mat,quadratic,,{}
+low_tail_q10__mat,mat,low_tail,,"{'q': 0.1, 'cut': -1.4560623385814089}"
+hinge_low_q10__mat,mat,hinge_low,,"{'q': 0.1, 'cut': -1.4560623385814089}"
+low_tail_q25__mat,mat,low_tail,,"{'q': 0.25, 'cut': -0.7806079218576085}"
+hinge_low_q25__mat,mat,hinge_low,,"{'q': 0.25, 'cut': -0.7806079218576085}"
+high_tail_q75__mat,mat,high_tail,,"{'q': 0.75, 'cut': 0.9100418467152447}"
+hinge_high_q75__mat,mat,hinge_high,,"{'q': 0.75, 'cut': 0.9100418467152447}"
+high_tail_q90__mat,mat,high_tail,,"{'q': 0.9, 'cut': 1.1782846394682094}"
+hinge_high_q90__mat,mat,hinge_high,,"{'q': 0.9, 'cut': 1.1782846394682094}"
+interaction_with_mean_vpd__mat,mat,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mat,mat,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mat,mat,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mat,mat,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__mean_annual_temperature,mean_annual_temperature,linear,,{}
+quadratic__mean_annual_temperature,mean_annual_temperature,quadratic,,{}
+low_tail_q10__mean_annual_temperature,mean_annual_temperature,low_tail,,"{'q': 0.1, 'cut': -1.4560623385814089}"
+hinge_low_q10__mean_annual_temperature,mean_annual_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.4560623385814089}"
+low_tail_q25__mean_annual_temperature,mean_annual_temperature,low_tail,,"{'q': 0.25, 'cut': -0.7806079218576085}"
+hinge_low_q25__mean_annual_temperature,mean_annual_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.7806079218576085}"
+high_tail_q75__mean_annual_temperature,mean_annual_temperature,high_tail,,"{'q': 0.75, 'cut': 0.9100418467152447}"
+hinge_high_q75__mean_annual_temperature,mean_annual_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.9100418467152447}"
+high_tail_q90__mean_annual_temperature,mean_annual_temperature,high_tail,,"{'q': 0.9, 'cut': 1.1782846394682094}"
+hinge_high_q90__mean_annual_temperature,mean_annual_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.1782846394682094}"
+interaction_with_mean_vpd__mean_annual_temperature,mean_annual_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mean_annual_temperature,mean_annual_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_annual_temperature,mean_annual_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_annual_temperature,mean_annual_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__mean_temperature,mean_temperature,linear,,{}
+quadratic__mean_temperature,mean_temperature,quadratic,,{}
+low_tail_q10__mean_temperature,mean_temperature,low_tail,,"{'q': 0.1, 'cut': -1.456111596275548}"
+hinge_low_q10__mean_temperature,mean_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.456111596275548}"
+low_tail_q25__mean_temperature,mean_temperature,low_tail,,"{'q': 0.25, 'cut': -0.7805676182158778}"
+hinge_low_q25__mean_temperature,mean_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.7805676182158778}"
+high_tail_q75__mean_temperature,mean_temperature,high_tail,,"{'q': 0.75, 'cut': 0.9100059399703677}"
+hinge_high_q75__mean_temperature,mean_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.9100059399703677}"
+high_tail_q90__mean_temperature,mean_temperature,high_tail,,"{'q': 0.9, 'cut': 1.1782945428411364}"
+hinge_high_q90__mean_temperature,mean_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.1782945428411364}"
+interaction_with_mean_vpd__mean_temperature,mean_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__mean_temperature,mean_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__mean_temperature,mean_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__mean_temperature,mean_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__median_temperature,median_temperature,linear,,{}
+quadratic__median_temperature,median_temperature,quadratic,,{}
+low_tail_q10__median_temperature,median_temperature,low_tail,,"{'q': 0.1, 'cut': -1.4455633125517733}"
+hinge_low_q10__median_temperature,median_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.4455633125517733}"
+low_tail_q25__median_temperature,median_temperature,low_tail,,"{'q': 0.25, 'cut': -0.777759456366802}"
+hinge_low_q25__median_temperature,median_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.777759456366802}"
+high_tail_q75__median_temperature,median_temperature,high_tail,,"{'q': 0.75, 'cut': 0.9253487905677154}"
+hinge_high_q75__median_temperature,median_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.9253487905677154}"
+high_tail_q90__median_temperature,median_temperature,high_tail,,"{'q': 0.9, 'cut': 1.159328160849421}"
+hinge_high_q90__median_temperature,median_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.159328160849421}"
+interaction_with_mean_vpd__median_temperature,median_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__median_temperature,median_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__median_temperature,median_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__median_temperature,median_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__n_temperature,n_temperature,linear,,{}
+quadratic__n_temperature,n_temperature,quadratic,,{}
+low_tail_q10__n_temperature,n_temperature,low_tail,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+hinge_low_q10__n_temperature,n_temperature,hinge_low,,"{'q': 0.1, 'cut': 0.061391018641121356}"
+low_tail_q25__n_temperature,n_temperature,low_tail,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+hinge_low_q25__n_temperature,n_temperature,hinge_low,,"{'q': 0.25, 'cut': 0.061391018641121356}"
+high_tail_q75__n_temperature,n_temperature,high_tail,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+hinge_high_q75__n_temperature,n_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.11617493213700864}"
+high_tail_q90__n_temperature,n_temperature,high_tail,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+hinge_high_q90__n_temperature,n_temperature,hinge_high,,"{'q': 0.9, 'cut': 0.28052667262467046}"
+interaction_with_mean_vpd__n_temperature,n_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__n_temperature,n_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__n_temperature,n_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__n_temperature,n_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p10_temperature,p10_temperature,linear,,{}
+quadratic__p10_temperature,p10_temperature,quadratic,,{}
+low_tail_q10__p10_temperature,p10_temperature,low_tail,,"{'q': 0.1, 'cut': -1.439452418367648}"
+hinge_low_q10__p10_temperature,p10_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.439452418367648}"
+low_tail_q25__p10_temperature,p10_temperature,low_tail,,"{'q': 0.25, 'cut': -0.9467581626497283}"
+hinge_low_q25__p10_temperature,p10_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.9467581626497283}"
+high_tail_q75__p10_temperature,p10_temperature,high_tail,,"{'q': 0.75, 'cut': 0.9590370099847311}"
+hinge_high_q75__p10_temperature,p10_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.9590370099847311}"
+high_tail_q90__p10_temperature,p10_temperature,high_tail,,"{'q': 0.9, 'cut': 1.1480312686608771}"
+hinge_high_q90__p10_temperature,p10_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.1480312686608771}"
+interaction_with_mean_vpd__p10_temperature,p10_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p10_temperature,p10_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p10_temperature,p10_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p10_temperature,p10_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__p90_temperature,p90_temperature,linear,,{}
+quadratic__p90_temperature,p90_temperature,quadratic,,{}
+low_tail_q10__p90_temperature,p90_temperature,low_tail,,"{'q': 0.1, 'cut': -1.5370922300585448}"
+hinge_low_q10__p90_temperature,p90_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.5370922300585448}"
+low_tail_q25__p90_temperature,p90_temperature,low_tail,,"{'q': 0.25, 'cut': -0.9170408939906753}"
+hinge_low_q25__p90_temperature,p90_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.9170408939906753}"
+high_tail_q75__p90_temperature,p90_temperature,high_tail,,"{'q': 0.75, 'cut': 0.7492035586462648}"
+hinge_high_q75__p90_temperature,p90_temperature,hinge_high,,"{'q': 0.75, 'cut': 0.7492035586462648}"
+high_tail_q90__p90_temperature,p90_temperature,high_tail,,"{'q': 0.9, 'cut': 1.235304578283336}"
+hinge_high_q90__p90_temperature,p90_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.235304578283336}"
+interaction_with_mean_vpd__p90_temperature,p90_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__p90_temperature,p90_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__p90_temperature,p90_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__p90_temperature,p90_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
+linear__sd_temperature,sd_temperature,linear,,{}
+quadratic__sd_temperature,sd_temperature,quadratic,,{}
+low_tail_q10__sd_temperature,sd_temperature,low_tail,,"{'q': 0.1, 'cut': -1.1403682195182216}"
+hinge_low_q10__sd_temperature,sd_temperature,hinge_low,,"{'q': 0.1, 'cut': -1.1403682195182216}"
+low_tail_q25__sd_temperature,sd_temperature,low_tail,,"{'q': 0.25, 'cut': -0.9186002269332574}"
+hinge_low_q25__sd_temperature,sd_temperature,hinge_low,,"{'q': 0.25, 'cut': -0.9186002269332574}"
+high_tail_q75__sd_temperature,sd_temperature,high_tail,,"{'q': 0.75, 'cut': 1.0354424975183192}"
+hinge_high_q75__sd_temperature,sd_temperature,hinge_high,,"{'q': 0.75, 'cut': 1.0354424975183192}"
+high_tail_q90__sd_temperature,sd_temperature,high_tail,,"{'q': 0.9, 'cut': 1.3537262056261654}"
+hinge_high_q90__sd_temperature,sd_temperature,hinge_high,,"{'q': 0.9, 'cut': 1.3537262056261654}"
+interaction_with_mean_vpd__sd_temperature,sd_temperature,interaction,mean_vpd,{'moderator_family': 'baseline_vpd'}
+interaction_with_mean_soil_moisture__sd_temperature,sd_temperature,interaction,mean_soil_moisture,{'moderator_family': 'baseline_soil_moisture'}
+interaction_with_aridity__sd_temperature,sd_temperature,interaction,aridity,{'moderator_family': 'aridity'}
+interaction_with_mean_annual_precipitation__sd_temperature,sd_temperature,interaction,mean_annual_precipitation,{'moderator_family': 'precipitation'}
