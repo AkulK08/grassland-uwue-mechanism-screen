@@ -8,7 +8,7 @@ library(amerifluxr)
 
 user_id <- Sys.getenv("AMF_USER")
 user_email <- Sys.getenv("AMF_EMAIL")
-out_dir <- "data/raw/towers/_reza_raw_exports/ameriflux_base"
+out_dir <- "data/raw/towers/_project_raw_exports/ameriflux_base"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 sites <- c(

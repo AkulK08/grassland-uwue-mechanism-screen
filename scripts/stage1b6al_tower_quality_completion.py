@@ -20,8 +20,8 @@ FIG = OUT / "figures"
 for p in [TAB, TXT, FIG]:
     p.mkdir(parents=True, exist_ok=True)
 
-FINAL_TOWER = Path("results/stage1b6ak_reza_complete_resolution_packet/tables/Table_PRODUCT03bf_reza_final_tower_validation_table.csv")
-AGREEMENT_LONG = Path("results/stage1b6ak_reza_complete_resolution_packet/tables/Table_PRODUCT03bg_reza_tower_satellite_agreement_long.csv")
+FINAL_TOWER = Path("results/stage1b6ak_project_complete_resolution_packet/tables/Table_PRODUCT03bf_project_final_tower_validation_table.csv")
+AGREEMENT_LONG = Path("results/stage1b6ak_project_complete_resolution_packet/tables/Table_PRODUCT03bg_project_tower_satellite_agreement_long.csv")
 
 if not FINAL_TOWER.exists():
     raise FileNotFoundError(f"Missing final tower table: {FINAL_TOWER}. Run stage1b6ak first.")
@@ -96,7 +96,7 @@ def find_flux_files():
             try:
                 if p.is_file() and p.suffix.lower() in suffixes and p.stat().st_size > 0:
                     s = str(p).lower()
-                    if any(k in s for k in ["tower", "fluxnet", "ameriflux", "icos", "ozflux", "reza"]):
+                    if any(k in s for k in ["tower", "fluxnet", "ameriflux", "icos", "ozflux", "project"]):
                         files.append(p)
             except Exception:
                 pass
@@ -333,7 +333,7 @@ if len(best_quality):
     keep_cols = [c for c in keep_cols if c in best_quality.columns]
     merged = merged.merge(best_quality[keep_cols], on="site_id", how="left", suffixes=("", "_quality"))
 
-merged.to_csv(TAB / "Table_PRODUCT03bq_reza_tower_table_with_quality_completed.csv", index=False)
+merged.to_csv(TAB / "Table_PRODUCT03bq_project_tower_table_with_quality_completed.csv", index=False)
 
 # Missing manifest.
 manifest_rows = []
@@ -358,7 +358,7 @@ for site in target_sites:
             "network_guess": network_guess,
             "required_missing_items": "; ".join(sorted(set(needs))),
             "minimum_required_columns": "TIMESTAMP/site_id, GPP, LE, VPD, H, NETRAD, G, LE_QC/GPP_QC/VPD_QC",
-            "purpose": "compute energy-balance closure, gap-fill fraction, tower WUE/uWUE, and Reza-quality tower filter",
+            "purpose": "compute energy-balance closure, gap-fill fraction, tower WUE/uWUE, and project-quality tower filter",
         })
 
 manifest = pd.DataFrame(manifest_rows)
@@ -378,10 +378,10 @@ status = {
     "sites_with_closure_ratio": closure_n,
     "sites_with_gapfill_fraction": gap_n,
     "sites_with_tower_uwue_inputs": uwue_n,
-    "fully_resolved_for_reza": bool(closure_n == len(target_sites) and gap_n == len(target_sites)),
+    "fully_resolved_for_project": bool(closure_n == len(target_sites) and gap_n == len(target_sites)),
     "missing_sites_count": int(len(manifest)),
     "next_action": (
-        "Tower quality filters are complete; send Reza the completed tower table."
+        "Tower quality filters are complete; send project the completed tower table."
         if closure_n == len(target_sites) and gap_n == len(target_sites)
         else
         "Download/add raw tower exports listed in Table_PRODUCT03br_missing_tower_raw_download_manifest.csv, then rerun this script."
@@ -430,7 +430,7 @@ report.append("```")
 report.append("")
 report.append("## Interpretation")
 report.append("")
-if status["fully_resolved_for_reza"]:
+if status["fully_resolved_for_project"]:
     report.append("Tower closure and gap-fill are now fully resolved for the clean tower table.")
 else:
     report.append("Tower closure and gap-fill are still not fully resolved from local files. This is not a coding issue anymore unless the raw files are present under different names; it requires adding raw tower network exports with the columns listed in the manifest.")
@@ -441,7 +441,7 @@ print("\n".join(report))
 print("")
 print("WROTE", TAB / "Table_PRODUCT03bo_tower_raw_file_inventory.csv")
 print("WROTE", TAB / "Table_PRODUCT03bp_tower_quality_candidates_by_site_file.csv")
-print("WROTE", TAB / "Table_PRODUCT03bq_reza_tower_table_with_quality_completed.csv")
+print("WROTE", TAB / "Table_PRODUCT03bq_project_tower_table_with_quality_completed.csv")
 print("WROTE", TAB / "Table_PRODUCT03br_missing_tower_raw_download_manifest.csv")
 print("WROTE", TAB / "STAGE1B6AL_TOWER_QUALITY_COMPLETION_DECISION.json")
 print("WROTE", TXT / "STAGE1B6AL_TOWER_QUALITY_COMPLETION_REPORT.md")

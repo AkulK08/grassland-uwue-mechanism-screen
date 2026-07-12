@@ -7,8 +7,8 @@ import pandas as pd
 OUT = Path("results/thesis_feasibility_no_tower")
 OUT.mkdir(parents=True, exist_ok=True)
 
-RAW = Path("results/reza_final_nature_boot50/fullspec_response_results_raw.csv")
-CO2 = Path("results/reza_final_nature_boot50/fullspec_response_results_co2corrected.csv")
+RAW = Path("results/project_final_nature_boot50/fullspec_response_results_raw.csv")
+CO2 = Path("results/project_final_nature_boot50/fullspec_response_results_co2corrected.csv")
 
 if not RAW.exists():
     raise SystemExit(f"Missing {RAW}")
@@ -288,9 +288,9 @@ else:
     add("- Core physiology thesis is weak with current points.")
 
 if len(full) > 0:
-    add("- Full mentor trait thesis including isohydricity is computationally possible with current points.")
+    add("- Full reviewer trait thesis including isohydricity is computationally possible with current points.")
 else:
-    add("- Full mentor trait thesis including isohydricity is NOT supported by current 199 points because complete-case coverage is too low.")
+    add("- Full reviewer trait thesis including isohydricity is NOT supported by current 199 points because complete-case coverage is too low.")
 
 add("- Without tower-centered GEE, product-family validation is still missing.")
 add("- Therefore: the thesis is plausible only as an unvalidated feasibility result right now; final paper still needs either tower extraction or a clear statement that tower validation is pending/impossible.")
@@ -300,8 +300,8 @@ verdict = {
     "core_trait_models_possible_current_points": bool(len(core) > 0),
     "full_isohydricity_trait_model_possible_current_points": bool(len(full) > 0),
     "tower_validation_available": False,
-    "final_mentor_thesis_supported_now": False,
-    "final_mentor_thesis_possible_if_tower_validates_and_trait_sample_expanded": True,
+    "final_reviewer_thesis_supported_now": False,
+    "final_reviewer_thesis_possible_if_tower_validates_and_trait_sample_expanded": True,
 }
 
 with open(OUT / "thesis_feasibility_verdict.json", "w") as f:

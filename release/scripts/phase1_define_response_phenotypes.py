@@ -7,10 +7,10 @@ import pandas as pd
 OUTDIR = Path("results/trait_framework")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-RAW_RESP = Path("results/reza_final_nature_boot50/fullspec_response_results_raw.csv")
-CO2_RESP = Path("results/reza_final_nature_boot50/fullspec_response_results_co2corrected.csv")
-RAW_SURF = Path("results/reza_final_nature_boot50/fullspec_vpd_sm_surface_raw.csv")
-CO2_SURF = Path("results/reza_final_nature_boot50/fullspec_vpd_sm_surface_co2corrected.csv")
+RAW_RESP = Path("results/project_final_nature_boot50/fullspec_response_results_raw.csv")
+CO2_RESP = Path("results/project_final_nature_boot50/fullspec_response_results_co2corrected.csv")
+RAW_SURF = Path("results/project_final_nature_boot50/fullspec_vpd_sm_surface_raw.csv")
+CO2_SURF = Path("results/project_final_nature_boot50/fullspec_vpd_sm_surface_co2corrected.csv")
 
 required = [RAW_RESP, CO2_RESP, RAW_SURF, CO2_SURF]
 missing = [str(p) for p in required if not p.exists()]

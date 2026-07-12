@@ -1431,7 +1431,7 @@ def main():
         "",
         "## Interpretation",
         "",
-        "This phase separates the mentor thesis into two levels.",
+        "This phase separates the reviewer thesis into two levels.",
         "",
         "1. General ecosystem-flux thesis: the all-site tower phenotype can support a broad ecosystem WUE/uWUE response paper because it uses many eddy-covariance sites and captures saturation, breakdown, enhancement, and inconclusive response classes.",
         "",

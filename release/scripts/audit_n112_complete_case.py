@@ -8,8 +8,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 # Edit/add paths here if your relevant table has a different name.
 CANDIDATE_FILES = [
-    ROOT / "results/stage1b6as_final_full_reza_rigor/tables/STAGE1B6AS_FINAL_FULL_REZA_RIGOR_DATA.csv",
-    ROOT / "results/stage1b6as_final_full_reza_rigor/tables/STAGE1B6AS_FINAL_FULL_REZA_RIGOR_INPUT.csv",
+    ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/STAGE1B6AS_FINAL_FULL_STRICT_RIGOR_DATA.csv",
+    ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/STAGE1B6AS_FINAL_FULL_STRICT_RIGOR_INPUT.csv",
     ROOT / "results/stage1b6au_strict_real_trait_flux/tables/Table_PRODUCT03dx_strict_real_candidate_trait_flux_theses.csv",
     ROOT / "results/stage1b6au_strict_real_trait_flux/tables/Table_PRODUCT03dw_strict_real_trait_to_flux_tests.csv",
     ROOT / "results/mediation/tables/grassland_like_no_crop_mediation_input.csv",

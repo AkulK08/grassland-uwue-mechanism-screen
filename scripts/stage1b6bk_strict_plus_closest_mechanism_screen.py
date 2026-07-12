@@ -112,8 +112,8 @@ def id_cols(df):
 def choose_base_dataset():
     preferred = [
         ROOT / "results" / "trait_framework" / "trait_model_dataset.csv",
-        ROOT / "results" / "stage1b6be_full_reza_lai_artifact_screen" / "tables" / "POINT_LEVEL_MODEL_DATASET.csv",
-        ROOT / "results" / "stage1b6be_full_reza_lai_artifact_screen" / "tables" / "point_level_model_dataset.csv",
+        ROOT / "results" / "stage1b6be_FULL_STRICT_lai_artifact_screen" / "tables" / "POINT_LEVEL_MODEL_DATASET.csv",
+        ROOT / "results" / "stage1b6be_FULL_STRICT_lai_artifact_screen" / "tables" / "point_level_model_dataset.csv",
     ]
     rows = []
     for p in preferred:
@@ -1097,7 +1097,7 @@ def main():
     psum.to_csv(TAB / "PRODUCT_DEPENDENCY_GATE_SUMMARY.csv", index=False)
 
     c4 = primary[primary["feature"].astype(str).map(lambda x: "c4" in norm(x))].copy()
-    c4.to_csv(TAB / "REZA_REQUIRED_C4_FULL_CONTROL_CHECK.csv", index=False)
+    c4.to_csv(TAB / "project_REQUIRED_C4_FULL_CONTROL_CHECK.csv", index=False)
 
     gates = primary[primary["mechanism_id"].isin(survivor_ids)].copy()
     if not boot.empty:
@@ -1142,7 +1142,7 @@ def main():
     gates["product_clean_gate"] = gates["product_clean__product_gate"].astype(str).eq("PASS")
     gates["tower_strict_gate"] = False
 
-    gates["FULL_REZA_STRICT_PASS"] = gates["primary_pass"] & gates["bootstrap_gate"] & gates["clean_gate"] & gates["product_all_gate"] & gates["product_clean_gate"] & gates["tower_strict_gate"]
+    gates["FULL_STRICT_STRICT_PASS"] = gates["primary_pass"] & gates["bootstrap_gate"] & gates["clean_gate"] & gates["product_all_gate"] & gates["product_clean_gate"] & gates["tower_strict_gate"]
     gates["SATELLITE_STRICT_PASS_NO_TOWER"] = gates["primary_pass"] & gates["bootstrap_gate"] & gates["clean_gate"] & gates["product_all_gate"] & gates["product_clean_gate"]
 
     non_tower = ["primary_pass", "bootstrap_gate", "clean_gate", "product_all_gate", "product_clean_gate"]
@@ -1158,8 +1158,8 @@ def main():
     gates["tower_failure_reason"] = gates.apply(lambda r: fail_text(r, "tower"), axis=1)
 
     def tier(r):
-        if bool(r["FULL_REZA_STRICT_PASS"]):
-            return "TIER_0_FULL_REZA_STRICT_PASS"
+        if bool(r["FULL_STRICT_STRICT_PASS"]):
+            return "TIER_0_FULL_STRICT_STRICT_PASS"
         if bool(r["SATELLITE_STRICT_PASS_NO_TOWER"]):
             return "TIER_1_SATELLITE_STRICT_PASS_NO_TOWER"
         if r["non_tower_gate_score_0_to_5"] == 4:
@@ -1172,15 +1172,15 @@ def main():
 
     gates["closest_tier"] = gates.apply(tier, axis=1)
     gates = gates.sort_values(
-        ["FULL_REZA_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER", "non_tower_gate_score_0_to_5", "full_gate_score_0_to_6", "bh_q", "p"],
+        ["FULL_STRICT_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER", "non_tower_gate_score_0_to_5", "full_gate_score_0_to_6", "bh_q", "p"],
         ascending=[False, False, False, False, True, True],
     )
     gates.to_csv(TAB / "GATED_AND_CLOSEST_STRICT_ECOLOGICAL_SURVIVORS.csv", index=False)
 
-    fullpass = gates[gates["FULL_REZA_STRICT_PASS"]].copy()
+    fullpass = gates[gates["FULL_STRICT_STRICT_PASS"]].copy()
     satpass = gates[gates["SATELLITE_STRICT_PASS_NO_TOWER"]].copy()
     top50 = gates.head(50).copy()
-    fullpass.to_csv(TAB / "FULL_REZA_STRICT_PASSING_MECHANISMS.csv", index=False)
+    fullpass.to_csv(TAB / "FULL_STRICT_STRICT_PASSING_MECHANISMS.csv", index=False)
     satpass.to_csv(TAB / "SATELLITE_STRICT_PASSING_MECHANISMS_NO_TOWER.csv", index=False)
     top50.to_csv(TAB / "TOP50_CLOSEST_VALID_MECHANISMS.csv", index=False)
 
@@ -1200,7 +1200,7 @@ def main():
         "clean_mask": cinfo,
         "primary_pass_count": int(primary["primary_pass"].sum()),
         "gate_survivor_count": int(len(survivor_mechs)),
-        "full_reza_strict_pass_count": int(len(fullpass)),
+        "FULL_STRICT_strict_pass_count": int(len(fullpass)),
         "satellite_strict_no_tower_pass_count": int(len(satpass)),
         "c4_rows_found": int(len(c4)),
         "seed": SEED,
@@ -1242,9 +1242,9 @@ def main():
     lines.append("")
     lines.append("Final strict result")
     if len(fullpass) == 0:
-        lines.append("- FULL_REZA_STRICT_PASSING_MECHANISMS: NONE")
+        lines.append("- FULL_STRICT_STRICT_PASSING_MECHANISMS: NONE")
     else:
-        lines.append(f"- FULL_REZA_STRICT_PASSING_MECHANISMS: {len(fullpass)}")
+        lines.append(f"- FULL_STRICT_STRICT_PASSING_MECHANISMS: {len(fullpass)}")
         cols = ["closest_tier", "mechanism_id", "feature", "story_category", "mechanism_type", "coef", "p", "bh_q", "non_tower_gate_score_0_to_5", "full_gate_score_0_to_6"]
         lines.append(fullpass.head(20)[cols].to_string(index=False))
     if len(satpass) == 0:
@@ -1287,9 +1287,9 @@ def main():
         TAB / "TOP50_CLOSEST_VALID_MECHANISMS.csv",
         TAB / "BEST_CLOSEST_BY_ECOLOGICAL_CATEGORY.csv",
         TAB / "GATED_AND_CLOSEST_STRICT_ECOLOGICAL_SURVIVORS.csv",
-        TAB / "FULL_REZA_STRICT_PASSING_MECHANISMS.csv",
+        TAB / "FULL_STRICT_STRICT_PASSING_MECHANISMS.csv",
         TAB / "SATELLITE_STRICT_PASSING_MECHANISMS_NO_TOWER.csv",
-        TAB / "REZA_REQUIRED_C4_FULL_CONTROL_CHECK.csv",
+        TAB / "project_REQUIRED_C4_FULL_CONTROL_CHECK.csv",
         TAB / "STRICT_FEATURE_CANDIDATE_AUDIT.csv",
         TAB / "PROGRAMMING_AUDIT.json",
     ]:

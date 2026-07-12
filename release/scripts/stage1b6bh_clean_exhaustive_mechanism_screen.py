@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 # Purpose:
 #   Exhaustively screen all eligible ecological / trait / structure / climate
 #   numeric features in the current point-level dataset and test whether any
-#   relationship passes Reza-style rigor:
+#   relationship passes strict rigor:
 #
 #   1. Full climate/environment controls.
 #   2. Discovery-wide FDR.
@@ -1515,7 +1515,7 @@ def main():
     # -------------------------------------------------------------------------
     c4_ids = [m["mechanism_id"] for m in mechanisms if "c4" in norm_name(m["base_feature"]) and m["mechanism_type"] == "linear_main_effect"]
     c4_required = primary[primary["mechanism_id"].isin(c4_ids)].copy()
-    c4_required.to_csv(TAB / "REZA_REQUIRED_C4_FULL_CONTROL_MODEL_RESULTS.csv", index=False)
+    c4_required.to_csv(TAB / "project_REQUIRED_C4_FULL_CONTROL_MODEL_RESULTS.csv", index=False)
 
     # -------------------------------------------------------------------------
     # Merge gates.
@@ -1691,7 +1691,7 @@ def main():
     lines.append("")
     lines.append("Purpose")
     lines.append("- Exhaustively screen eligible ecological / trait / structure / climate features.")
-    lines.append("- Apply Reza-style gates: full controls, FDR, land-cover/C4-crop cleaning, exact product robustness, GOSIF×GLEAM least-dependent check, tower anchor where possible.")
+    lines.append("- Apply strict gates: full controls, FDR, land-cover/C4-crop cleaning, exact product robustness, GOSIF×GLEAM least-dependent check, tower anchor where possible.")
     lines.append("")
     lines.append("Input")
     lines.append(f"- Selected point table: {input_path}")
@@ -1794,7 +1794,7 @@ def main():
         TAB / "EXACT_PRODUCT_TESTS_FOR_DISCOVERY_SURVIVORS.csv",
         TAB / "PRODUCT_DEPENDENCY_GATE_SUMMARY.csv",
         TAB / "CROPLAND_C4_CROP_CLEAN_SENSITIVITY.csv",
-        TAB / "REZA_REQUIRED_C4_FULL_CONTROL_MODEL_RESULTS.csv",
+        TAB / "project_REQUIRED_C4_FULL_CONTROL_MODEL_RESULTS.csv",
         TAB / "TOWER_DIRECTIONAL_ANCHOR_FOR_DISCOVERY_SURVIVORS.csv",
         TAB / "PROGRAMMING_AUDIT.json",
     ]:

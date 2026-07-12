@@ -28,7 +28,7 @@ def find_candidate_tables():
         for p in ROOT.glob(pat):
             name = p.name.lower()
             if any(k in name for k in [
-                "candidate", "c4", "trait", "flux", "reza", "full", "control",
+                "candidate", "c4", "trait", "flux", "project", "full", "control",
                 "point", "wue", "uwue", "mediation", "pathway"
             ]):
                 hits.append(p)

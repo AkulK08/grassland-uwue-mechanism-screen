@@ -118,7 +118,7 @@ for p in OPTIONAL_TABLES:
         )
         interesting = interesting.drop(columns=["extra_interest_flag"])
 
-# For strict mentor completion, keep all49 as the full tower arbitration set.
+# For strict reviewer completion, keep all49 as the full tower arbitration set.
 # main13 remains the primary manuscript scope.
 interesting["strict_priority"] = np.where(interesting["scope"].eq("main13"), 1,
                                   np.where(interesting["scope"].eq("strict_gra5"), 2, 3))

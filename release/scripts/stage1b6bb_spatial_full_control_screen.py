@@ -13,12 +13,12 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-DATA_PATH = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
-PRIOR_C4_PATH = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fk_final_c4_rows_only.csv"
-CROP_PATH = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fm_final_crop_summary.csv"
-TOWER_PATH = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fd_target_tower_landcover_summary.csv"
-TOWER_STRICT_PATH = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/Table_PRODUCT03di_final_full_reza_strict_et_ranking.csv"
-TOWER_SENS_PATH = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/Table_PRODUCT03dj_final_full_reza_sensitivity_et_ranking.csv"
+DATA_PATH = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
+PRIOR_C4_PATH = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fk_final_c4_rows_only.csv"
+CROP_PATH = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fm_final_crop_summary.csv"
+TOWER_PATH = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fd_target_tower_landcover_summary.csv"
+TOWER_STRICT_PATH = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/Table_PRODUCT03di_final_FULL_STRICT_strict_et_ranking.csv"
+TOWER_SENS_PATH = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/Table_PRODUCT03dj_final_FULL_STRICT_sensitivity_et_ranking.csv"
 
 RESPONSE = "latent_slope_change"
 C4 = "c4_fraction_raw"
@@ -400,7 +400,7 @@ def main():
     decision = {
         "generated": datetime.now().isoformat(timespec="seconds"),
         "stage": "1B.6BB_spatial_full_control_screen",
-        "purpose": "Exploratory screen for predefined spatial/climate subsets where C4 passes Reza-style full controls.",
+        "purpose": "Exploratory screen for predefined spatial/climate subsets where C4 passes strict full controls.",
         "warning": "This is hypothesis-generating. Do not present subgroup hits as the main thesis unless ecologically justified and replicated.",
         "response": RESPONSE,
         "c4_variable": C4,
@@ -422,10 +422,10 @@ def main():
 
     # Google-doc-ready note.
     lines = []
-    lines.append("SPATIAL SUBGROUP SCREEN FOR REZA FULL-CONTROL C4 CHECK")
+    lines.append("SPATIAL SUBGROUP SCREEN FOR project FULL-CONTROL C4 CHECK")
     lines.append("")
     lines.append("Purpose")
-    lines.append("This screen asks whether the failed global direct C4 result hides a spatially localized subset where C4 passes the full Reza control set.")
+    lines.append("This screen asks whether the failed global direct C4 result hides a spatially localized subset where C4 passes the full strict control set.")
     lines.append("")
     lines.append("Important caveat")
     lines.append("This is exploratory and hypothesis-generating. It should not be presented as proof that the original C4 thesis holds unless a passing region is ecologically coherent, crop-clean, sufficiently powered, and ideally replicated with an independent/product sensitivity check.")
@@ -484,7 +484,7 @@ def main():
         lines.append("No nominal exploratory spatial signals found.")
     lines.append("")
 
-    lines.append("How to explain this to Reza")
+    lines.append("How to explain this to project")
     lines.append("If no strict region passes:")
     lines.append("The spatial subgroup screen did not rescue the independent direct C4 claim. This strengthens the conclusion that the global C4 signal is mainly tied to the VPD/climate gradient rather than a robust independent trait effect.")
     lines.append("")

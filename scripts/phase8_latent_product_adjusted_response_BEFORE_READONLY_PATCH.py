@@ -23,18 +23,18 @@ from sklearn.metrics import r2_score
 
 RANDOM_SEED = 42
 
-RAW_RESPONSE = Path("results/reza_final_nature_boot50/fullspec_response_results_raw.csv")
-CO2_RESPONSE = Path("results/reza_final_nature_boot50/fullspec_response_results_co2corrected.csv")
+RAW_RESPONSE = Path("results/project_final_nature_boot50/fullspec_response_results_raw.csv")
+CO2_RESPONSE = Path("results/project_final_nature_boot50/fullspec_response_results_co2corrected.csv")
 
-RAW_SURFACE = Path("results/reza_final_nature_boot50/fullspec_vpd_sm_surface_raw.csv")
-CO2_SURFACE = Path("results/reza_final_nature_boot50/fullspec_vpd_sm_surface_co2corrected.csv")
+RAW_SURFACE = Path("results/project_final_nature_boot50/fullspec_vpd_sm_surface_raw.csv")
+CO2_SURFACE = Path("results/project_final_nature_boot50/fullspec_vpd_sm_surface_co2corrected.csv")
 
 RAW_METRIC_MATRIX_CANDIDATES = [
-    Path("data/processed/reza_metric_matrix_raw.csv"),
+    Path("data/processed/project_metric_matrix_raw.csv"),
     Path("data/raw/agents/merged_full_matrix_raw.csv"),
 ]
 CO2_METRIC_MATRIX_CANDIDATES = [
-    Path("data/processed/reza_metric_matrix_co2corrected.csv"),
+    Path("data/processed/project_metric_matrix_co2corrected.csv"),
     Path("data/raw/agents/merged_full_matrix_co2corrected.csv"),
 ]
 

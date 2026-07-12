@@ -22,8 +22,8 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-REZA_DECISION = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/STAGE1B6AS_FINAL_FULL_REZA_RIGOR_DECISION.json"
-SITE_STATUS = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/Table_PRODUCT03dh_final_full_reza_site_status.csv"
+project_DECISION = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/STAGE1B6AS_FINAL_FULL_STRICT_RIGOR_DECISION.json"
+SITE_STATUS = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/Table_PRODUCT03dh_final_FULL_STRICT_site_status.csv"
 
 BAD_RESPONSE_WORDS = [
     "uncertainty", "range", "posterior_sd", "sd", "stderr", "std", "se_",
@@ -143,7 +143,7 @@ def all_candidate_csvs():
             continue
         for p in root.rglob("*.csv"):
             sp = str(p)
-            if "_reza_raw_exports" in sp:
+            if "_project_raw_exports" in sp:
                 continue
             if "stage1b6at_trait_flux_mechanism" in sp:
                 continue
@@ -412,9 +412,9 @@ def choose_best(test):
     return best, passed
 
 def main():
-    reza = {}
-    if REZA_DECISION.exists():
-        reza = json.loads(REZA_DECISION.read_text())
+    project = {}
+    if project_DECISION.exists():
+        project = json.loads(project_DECISION.read_text())
 
     inv = inventory_tables()
 
@@ -484,19 +484,19 @@ def main():
         "thesis_sentence": thesis_sentence,
         "can_claim_trait_predicts_real_flux_response": bool(best),
         "can_claim_c4_predicts_real_flux_response_after_controls": bool(c4_controlled),
-        "reza_context": {
-            "strict_quality_sites_n": reza.get("strict_quality_sites_n"),
-            "sensitivity_quality_sites_n": reza.get("sensitivity_quality_sites_n"),
-            "strict_top_et_product": reza.get("strict_top_et_product"),
-            "sensitivity_top_et_product": reza.get("sensitivity_top_et_product"),
-            "can_send_reza_as_full_quality_filtered_rigor": reza.get("can_send_reza_as_full_quality_filtered_rigor"),
+        "project_context": {
+            "strict_quality_sites_n": project.get("strict_quality_sites_n"),
+            "sensitivity_quality_sites_n": project.get("sensitivity_quality_sites_n"),
+            "strict_top_et_product": project.get("strict_top_et_product"),
+            "sensitivity_top_et_product": project.get("sensitivity_top_et_product"),
+            "can_send_project_as_full_quality_filtered_rigor": project.get("can_send_project_as_full_quality_filtered_rigor"),
         }
     }
 
     (TAB / "STAGE1B6AU_STRICT_REAL_TRAIT_FLUX_DECISION.json").write_text(json.dumps(decision, indent=2), encoding="utf-8")
 
     email = []
-    email.append("Hi Reza,")
+    email.append("Hi project,")
     email.append("")
     email.append("I reran the trait-to-flux mechanism screen with a stricter response-variable rule. I excluded any columns that were uncertainty/range/posterior-SD/standard-error/product-disagreement quantities, so the tested responses are actual flux-response variables rather than uncertainty artifacts.")
     email.append("")
@@ -521,7 +521,7 @@ def main():
     email.append("Best,")
     email.append("Akul")
 
-    (TXT / "REZA_STRICT_REAL_TRAIT_FLUX_EMAIL.md").write_text("\n".join(email), encoding="utf-8")
+    (TXT / "project_STRICT_REAL_TRAIT_FLUX_EMAIL.md").write_text("\n".join(email), encoding="utf-8")
 
     report = []
     report.append("# Stage 1B.6AU strict real trait-flux screen")
@@ -561,7 +561,7 @@ def main():
     print("WROTE", TAB / "STAGE1B6AU_STRICT_REAL_TRAIT_FLUX_DECISION.json")
     print("WROTE", TAB / "Table_PRODUCT03dw_strict_real_trait_to_flux_tests.csv")
     print("WROTE", TAB / "Table_PRODUCT03dx_strict_real_candidate_trait_flux_theses.csv")
-    print("WROTE", TXT / "REZA_STRICT_REAL_TRAIT_FLUX_EMAIL.md")
+    print("WROTE", TXT / "project_STRICT_REAL_TRAIT_FLUX_EMAIL.md")
 
 if __name__ == "__main__":
     main()

@@ -21,7 +21,7 @@ TXT = OUT / "text"
 for p in [TAB, TXT]:
     p.mkdir(parents=True, exist_ok=True)
 
-FINAL_TOWER = Path("results/stage1b6ak_reza_complete_resolution_packet/tables/Table_PRODUCT03bf_reza_final_tower_validation_table.csv")
+FINAL_TOWER = Path("results/stage1b6ak_project_complete_resolution_packet/tables/Table_PRODUCT03bf_project_final_tower_validation_table.csv")
 if not FINAL_TOWER.exists():
     raise FileNotFoundError("Missing Stage 1B.6AK tower table. Run 1B.6AK first.")
 
@@ -29,10 +29,10 @@ tower = pd.read_csv(FINAL_TOWER)
 target_sites = sorted(tower["site_id"].dropna().astype(str).unique())
 
 RAW_ROOTS = [
-    Path("data/raw/towers/_reza_raw_exports"),
-    Path("data/raw/towers/_reza_raw_exports/ameriflux_base"),
-    Path("data/raw/towers/_reza_raw_exports/manual_fluxnet"),
-    Path("data/raw/towers/_reza_raw_exports/extracted"),
+    Path("data/raw/towers/_project_raw_exports"),
+    Path("data/raw/towers/_project_raw_exports/ameriflux_base"),
+    Path("data/raw/towers/_project_raw_exports/manual_fluxnet"),
+    Path("data/raw/towers/_project_raw_exports/extracted"),
 ]
 
 def now():
@@ -146,7 +146,7 @@ def timestamp_interval_seconds(df, start_col, end_col, stamp_col):
     return pd.Series(86400.0, index=df.index)
 
 def extract_archives():
-    extract_dir = Path("data/raw/towers/_reza_raw_exports/extracted")
+    extract_dir = Path("data/raw/towers/_project_raw_exports/extracted")
     extract_dir.mkdir(parents=True, exist_ok=True)
     archives = []
     for root in RAW_ROOTS:
@@ -194,7 +194,7 @@ extract_log.to_csv(TAB / "Table_PRODUCT03bs_raw_archive_extract_log.csv", index=
 
 def find_candidate_csvs():
     files = []
-    for root in RAW_ROOTS + [Path("data/raw/towers/_reza_raw_exports/extracted")]:
+    for root in RAW_ROOTS + [Path("data/raw/towers/_project_raw_exports/extracted")]:
         if not root.exists():
             continue
         for p in root.rglob("*"):
@@ -388,7 +388,7 @@ if len(best):
     keep = [c for c in keep if c in best.columns]
     merged = merged.merge(best[keep], on="site_id", how="left")
 
-merged.to_csv(TAB / "Table_PRODUCT03bv_reza_tower_table_raw_quality_completed.csv", index=False)
+merged.to_csv(TAB / "Table_PRODUCT03bv_project_tower_table_raw_quality_completed.csv", index=False)
 
 missing_rows = []
 for site in target_sites:
@@ -412,7 +412,7 @@ for site in target_sites:
             "download_product_needed": "BASE-BADM HH/HR/Daily raw flux-met export" if site.startswith(("US-", "CA-")) else "FULLSET HH/HR or DD raw flux-met export",
             "missing_items": "; ".join(sorted(set(missing))),
             "required_columns": "TIMESTAMP_START/TIMESTAMP_END or TIMESTAMP, GPP, LE, VPD, H, NETRAD, G, QC flags",
-            "place_download_here": "data/raw/towers/_reza_raw_exports/manual_fluxnet/",
+            "place_download_here": "data/raw/towers/_project_raw_exports/manual_fluxnet/",
         })
 
 missing = pd.DataFrame(missing_rows)
@@ -432,13 +432,13 @@ status = {
     "sites_with_closure_ratio": closure_n,
     "sites_with_gapfill_fraction": gap_n,
     "sites_with_raw_uwue_inputs": uwue_n,
-    "fully_satisfies_reza_tower_quality": bool(closure_n == len(target_sites) and gap_n == len(target_sites)),
+    "fully_satisfies_project_tower_quality": bool(closure_n == len(target_sites) and gap_n == len(target_sites)),
     "remaining_missing_sites": int(len(missing)),
     "next_action": (
-        "Reza tower-quality requirement is closed. Rerun Stage 1B.6AK and send final packet."
+        "project tower-quality requirement is closed. Rerun Stage 1B.6AK and send final packet."
         if closure_n == len(target_sites) and gap_n == len(target_sites)
         else
-        "Download the remaining raw tower exports listed in Table_PRODUCT03bw_remaining_raw_tower_download_manifest.csv into data/raw/towers/_reza_raw_exports/manual_fluxnet/, then rerun this same script."
+        "Download the remaining raw tower exports listed in Table_PRODUCT03bw_remaining_raw_tower_download_manifest.csv into data/raw/towers/_project_raw_exports/manual_fluxnet/, then rerun this same script."
     )
 }
 
@@ -450,7 +450,7 @@ manual.append("")
 manual.append("Put downloaded zip/csv/txt files here:")
 manual.append("")
 manual.append("```text")
-manual.append("data/raw/towers/_reza_raw_exports/manual_fluxnet/")
+manual.append("data/raw/towers/_project_raw_exports/manual_fluxnet/")
 manual.append("```")
 manual.append("")
 manual.append("Required fields:")
@@ -482,7 +482,7 @@ report.append("```json")
 report.append(json.dumps(status, indent=2))
 report.append("```")
 report.append("")
-report.append("## Reza tower table with raw quality fields")
+report.append("## project tower table with raw quality fields")
 report.append("")
 show = [
     "site_id", "igbp_class", "site_years", "tower_response_class",
@@ -519,8 +519,8 @@ report.append("```")
 report.append("")
 report.append("## Bottom line")
 report.append("")
-if status["fully_satisfies_reza_tower_quality"]:
-    report.append("Tower closure and gap-fill are now fully populated for the 13-site Reza tower table.")
+if status["fully_satisfies_project_tower_quality"]:
+    report.append("Tower closure and gap-fill are now fully populated for the 13-site project tower table.")
 else:
     report.append("Tower closure/gap-fill are still not fully populated. This means the required raw tower energy-balance/QC exports are still missing for the listed sites. Download them into the manual_fluxnet folder and rerun this script.")
 
@@ -531,7 +531,7 @@ print("")
 print("WROTE", TAB / "Table_PRODUCT03bs_raw_archive_extract_log.csv")
 print("WROTE", TAB / "Table_PRODUCT03bt_raw_tower_file_inventory_after_download.csv")
 print("WROTE", TAB / "Table_PRODUCT03bu_raw_tower_quality_candidates.csv")
-print("WROTE", TAB / "Table_PRODUCT03bv_reza_tower_table_raw_quality_completed.csv")
+print("WROTE", TAB / "Table_PRODUCT03bv_project_tower_table_raw_quality_completed.csv")
 print("WROTE", TAB / "Table_PRODUCT03bw_remaining_raw_tower_download_manifest.csv")
 print("WROTE", TAB / "STAGE1B6AM_RAW_TOWER_DOWNLOAD_INGEST_DECISION.json")
 print("WROTE", TXT / "MANUAL_RAW_TOWER_DOWNLOAD_INSTRUCTIONS.md")

@@ -12,7 +12,7 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-DATA = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
+DATA = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
 
 RESPONSE = "latent_slope_change"
 C4 = "c4_fraction_raw"
@@ -391,7 +391,7 @@ def main():
     report.append("")
     report.append("## Meeting language")
     report.append("")
-    report.append("I should say: The C4 result is not a clean independent direct effect after controlling for baseline VPD. Instead, the evidence points to a C4–VPD pathway or climate-syndrome structure: C4 composition is associated with higher baseline VPD regimes, and baseline VPD strongly predicts the uWUE latent slope-change response. The main decision is whether Reza sees baseline VPD as a confounder, which would narrow/reject the C4 mechanism, or as part of the stress pathway, which would let us frame the thesis as a C4–VPD-linked trait-to-flux mechanism.")
+    report.append("I should say: The C4 result is not a clean independent direct effect after controlling for baseline VPD. Instead, the evidence points to a C4–VPD pathway or climate-syndrome structure: C4 composition is associated with higher baseline VPD regimes, and baseline VPD strongly predicts the uWUE latent slope-change response. The main decision is whether project sees baseline VPD as a confounder, which would narrow/reject the C4 mechanism, or as part of the stress pathway, which would let us frame the thesis as a C4–VPD-linked trait-to-flux mechanism.")
     report.append("")
     report.append("I should not say: C4 independently causes the ecosystem flux response after full climate controls.")
 

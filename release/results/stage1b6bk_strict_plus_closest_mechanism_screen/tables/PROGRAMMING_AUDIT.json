@@ -17,7 +17,7 @@
   },
   "primary_pass_count": 84,
   "gate_survivor_count": 117,
-  "full_reza_strict_pass_count": 0,
+  "FULL_STRICT_strict_pass_count": 0,
   "satellite_strict_no_tower_pass_count": 15,
   "c4_rows_found": 30,
   "seed": 123,

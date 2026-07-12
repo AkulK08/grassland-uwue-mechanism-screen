@@ -320,7 +320,7 @@ def standardize_trait_table(df, source_name, path):
         "passes_case_named",
         "passes_main_named",
         "passes_full_control",
-        "passes_mentor_20pct_residual_variance",
+        "passes_reviewer_20pct_residual_variance",
         "passes_case_threshold",
         "passes_main_threshold",
         "passes_full_control",

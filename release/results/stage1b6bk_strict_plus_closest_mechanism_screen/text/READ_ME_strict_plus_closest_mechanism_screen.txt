@@ -21,7 +21,7 @@ Land-cover / C4-crop clean mask
 - Used columns: analysis_natural_grassland_like_no_crop
 
 Final strict result
-- FULL_REZA_STRICT_PASSING_MECHANISMS: NONE
+- FULL_STRICT_STRICT_PASSING_MECHANISMS: NONE
 - SATELLITE_STRICT_PASSING_MECHANISMS_NO_TOWER: 15
                          closest_tier                              mechanism_id                 feature                story_category mechanism_type      coef        p     bh_q  non_tower_gate_score_0_to_5  full_gate_score_0_to_6
 TIER_1_SATELLITE_STRICT_PASS_NO_TOWER            hinge_low_q25__p10_temperature         p10_temperature          temperature gradient      hinge_low  0.453306 0.000005 0.001967                            5                       5
@@ -144,8 +144,8 @@ Important files
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/TOP50_CLOSEST_VALID_MECHANISMS.csv
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/BEST_CLOSEST_BY_ECOLOGICAL_CATEGORY.csv
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/GATED_AND_CLOSEST_STRICT_ECOLOGICAL_SURVIVORS.csv
-- /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/FULL_REZA_STRICT_PASSING_MECHANISMS.csv
+- /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/FULL_STRICT_STRICT_PASSING_MECHANISMS.csv
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/SATELLITE_STRICT_PASSING_MECHANISMS_NO_TOWER.csv
-- /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/REZA_REQUIRED_C4_FULL_CONTROL_CHECK.csv
+- /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/project_REQUIRED_C4_FULL_CONTROL_CHECK.csv
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/STRICT_FEATURE_CANDIDATE_AUDIT.csv
 - /Users/me/Downloads/grassland_wue_nature_repo/results/stage1b6bk_strict_plus_closest_mechanism_screen/tables/PROGRAMMING_AUDIT.json

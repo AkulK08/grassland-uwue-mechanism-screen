@@ -16,7 +16,7 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-BASE = ROOT / "results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
+BASE = ROOT / "results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
 
 TOWER_TABLES = [
     ROOT / "results/tower_grassland_spatial_trait_lock/tables/Table101_tower_landcover_spatial_trait_annotation.csv",

@@ -24,8 +24,8 @@ from sklearn.model_selection import KFold
 # PHASE 7: Physiological mechanism interpretation
 # =============================================================================
 
-BOOT_RAW = Path("results/reza_final_nature_boot50/fullspec_response_results_raw.csv")
-BOOT_CO2 = Path("results/reza_final_nature_boot50/fullspec_response_results_co2corrected.csv")
+BOOT_RAW = Path("results/project_final_nature_boot50/fullspec_response_results_raw.csv")
+BOOT_CO2 = Path("results/project_final_nature_boot50/fullspec_response_results_co2corrected.csv")
 TRAIT_DATASET = Path("results/trait_framework/trait_model_dataset.csv")
 PHASE3_CONSENSUS = Path("results/trait_framework/point_product_consensus_response.csv")
 PHASE3_COMBO = Path("results/trait_framework/phase3/point_product_combo_level_response.csv")

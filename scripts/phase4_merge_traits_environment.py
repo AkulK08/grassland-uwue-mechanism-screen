@@ -34,9 +34,9 @@ MAIN_OUT = Path("results/trait_framework/trait_model_dataset.csv")
 # Point-time data candidates, in preferred order.
 POINT_TIME_CANDIDATES = [
     Path("data/raw/agents/merged_full_matrix_co2corrected.csv"),
-    Path("data/processed/reza_metric_matrix_co2corrected.csv"),
+    Path("data/processed/project_metric_matrix_co2corrected.csv"),
     Path("data/raw/agents/merged_full_matrix_raw.csv"),
-    Path("data/processed/reza_metric_matrix_raw.csv"),
+    Path("data/processed/project_metric_matrix_raw.csv"),
 ]
 
 # Soil/covariate file candidates. The script also scans folders below.

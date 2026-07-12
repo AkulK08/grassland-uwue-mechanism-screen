@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 OUT = Path("results/trait_framework/phase2")
 OUT.mkdir(parents=True, exist_ok=True)
 
-RAW = Path("results/reza_final_nature_boot50/fullspec_response_results_raw.csv")
-CO2 = Path("results/reza_final_nature_boot50/fullspec_response_results_co2corrected.csv")
+RAW = Path("results/project_final_nature_boot50/fullspec_response_results_raw.csv")
+CO2 = Path("results/project_final_nature_boot50/fullspec_response_results_co2corrected.csv")
 
 CLASS_ORDER = [
     "enhancement",

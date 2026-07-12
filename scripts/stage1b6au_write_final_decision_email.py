@@ -12,7 +12,7 @@ TXT.mkdir(parents=True, exist_ok=True)
 
 tests_path = TAB / "Table_PRODUCT03dw_strict_real_trait_to_flux_tests.csv"
 cand_path = TAB / "Table_PRODUCT03dx_strict_real_candidate_trait_flux_theses.csv"
-reza_path = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/STAGE1B6AS_FINAL_FULL_REZA_RIGOR_DECISION.json"
+project_path = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/STAGE1B6AS_FINAL_FULL_STRICT_RIGOR_DECISION.json"
 
 if not tests_path.exists():
     raise FileNotFoundError(f"Missing tests file: {tests_path}")
@@ -60,9 +60,9 @@ else:
     passed["abs_coef"] = passed["coef_standardized"].abs()
     best = passed.sort_values(["q_bh", "abs_coef"], ascending=[True, False]).iloc[0]
 
-reza = {}
-if reza_path.exists():
-    reza = json.loads(reza_path.read_text())
+project = {}
+if project_path.exists():
+    project = json.loads(project_path.read_text())
 
 thesis = (
     "C4 photosynthetic composition predicts ecosystem-scale uWUE latent slope-change response "
@@ -90,20 +90,20 @@ decision = {
     "can_claim_c4_predicts_real_flux_response_after_controls": True,
     "causality_language": "Use predicts/organizes/supports trait-mediated mechanism; do not claim definitive causation.",
     "tower_validation_context": {
-        "raw_tower_sites_audited": reza.get("sites_with_any_raw_file"),
-        "computable_closure_gapfill_sites": reza.get("sites_with_computable_closure_gapfill"),
-        "strict_quality_sites_n": reza.get("strict_quality_sites_n"),
-        "sensitivity_quality_sites_n": reza.get("sensitivity_quality_sites_n"),
-        "strict_top_et_product": reza.get("strict_top_et_product"),
-        "sensitivity_top_et_product": reza.get("sensitivity_top_et_product"),
-        "can_send_reza_as_full_quality_filtered_rigor": reza.get("can_send_reza_as_full_quality_filtered_rigor"),
+        "raw_tower_sites_audited": project.get("sites_with_any_raw_file"),
+        "computable_closure_gapfill_sites": project.get("sites_with_computable_closure_gapfill"),
+        "strict_quality_sites_n": project.get("strict_quality_sites_n"),
+        "sensitivity_quality_sites_n": project.get("sensitivity_quality_sites_n"),
+        "strict_top_et_product": project.get("strict_top_et_product"),
+        "sensitivity_top_et_product": project.get("sensitivity_top_et_product"),
+        "can_send_project_as_full_quality_filtered_rigor": project.get("can_send_project_as_full_quality_filtered_rigor"),
     },
 }
 
 decision_path = TAB / "STAGE1B6AU_FIXED_FINAL_TRAIT_FLUX_THESIS_DECISION.json"
 decision_path.write_text(json.dumps(decision, indent=2), encoding="utf-8")
 
-email = f"""Hi Reza,
+email = f"""Hi project,
 
 Thank you again for the detailed feedback and for pushing this into an analysis-locking stage. I went back through the protocol point by point and rebuilt the analysis around the two gates you identified: product/tower validation as the guardrail, and a pre-specified trait-to-flux test as the biological thesis.
 
@@ -132,7 +132,7 @@ Best,
 Akul
 """
 
-email_path = TXT / "REZA_FINAL_TRAIT_FLUX_EMAIL.md"
+email_path = TXT / "project_FINAL_TRAIT_FLUX_EMAIL.md"
 email_path.write_text(email, encoding="utf-8")
 
 report = "# Final trait-flux thesis decision\n\n"

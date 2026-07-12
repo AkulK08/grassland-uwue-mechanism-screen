@@ -222,7 +222,7 @@ for _, row in raw.iterrows():
     ):
         paper_role = "secondary_result"
         paper_tier = "secondary_threshold_mechanism"
-        include_reason = "Cleanest mentor-style WUE threshold result: threshold-like response probability linked to rooting depth after soil-texture controls."
+        include_reason = "Cleanest reviewer-style WUE threshold result: threshold-like response probability linked to rooting depth after soil-texture controls."
 
     elif (
         "sahel proxy" in rnorm
@@ -329,7 +329,7 @@ def paper_sentence(row):
         )
     if row["paper_role"] == "secondary_result":
         return (
-            f"In {region}, the mentor-style threshold phenotype appears as {phenotype}; rooting depth is {direction}ly associated "
+            f"In {region}, the reviewer-style threshold phenotype appears as {phenotype}; rooting depth is {direction}ly associated "
             f"with threshold-like response probability after soil-texture controls (n={int(row['n'])}; residual R2={fmt(row['residual_r2'])}; "
             f"Spearman r={fmt(row['spearman_r'])}; permutation p={fmt(row['perm_p'])}; LOO stability={fmt(row['loo_sign_stability'])}). "
             f"This is the clearest WUE-threshold regional result."
@@ -426,7 +426,7 @@ if len(paper_table):
 else:
     lines.append("No paper-locked claims passed.")
 
-lines.append("\n## Answer to mentor-threshold question\n")
+lines.append("\n## Answer to reviewer-threshold question\n")
 if threshold_claim:
     lines.append(
         "The clearest WUE threshold-style result is the north-midlatitude 30N–45N result: "

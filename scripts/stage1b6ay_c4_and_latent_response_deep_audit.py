@@ -12,11 +12,11 @@ TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
 TARGET_SCRIPTS = [
-    ROOT / "scripts/stage1b6ai_reza_final_lock_with_c4.py",
+    ROOT / "scripts/stage1b6ai_project_final_lock_with_c4.py",
     ROOT / "scripts/phase8_latent_product_adjusted_response.py",
 ]
 
-KEY_TABLE = ROOT / "results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
+KEY_TABLE = ROOT / "results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
 
 # -----------------------------
 # helpers
@@ -57,9 +57,9 @@ windows = []
 
 # Known important regions from earlier grep.
 known_windows = {
-    "stage1b6ai_C4_file_and_sampling": ("scripts/stage1b6ai_reza_final_lock_with_c4.py", 512),
-    "stage1b6ai_C4_raw_to_fraction": ("scripts/stage1b6ai_reza_final_lock_with_c4.py", 642),
-    "stage1b6ai_C4_model": ("scripts/stage1b6ai_reza_final_lock_with_c4.py", 727),
+    "stage1b6ai_C4_file_and_sampling": ("scripts/stage1b6ai_project_final_lock_with_c4.py", 512),
+    "stage1b6ai_C4_raw_to_fraction": ("scripts/stage1b6ai_project_final_lock_with_c4.py", 642),
+    "stage1b6ai_C4_model": ("scripts/stage1b6ai_project_final_lock_with_c4.py", 727),
     "phase8_response_aliasing": ("scripts/phase8_latent_product_adjusted_response.py", 793),
     "phase8_response_validation_1": ("scripts/phase8_latent_product_adjusted_response.py", 924),
     "phase8_response_validation_2": ("scripts/phase8_latent_product_adjusted_response.py", 1024),

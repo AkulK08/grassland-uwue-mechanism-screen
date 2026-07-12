@@ -18,7 +18,7 @@ for p in [TAB, TXT]:
 
 POINT = ROOT / "results/stage1b6az_point_provenance_and_c4_missingness/tables/FULL_POINT_PROVENANCE_TABLE.csv"
 OBS = ROOT / "results/trait_framework/phase8/table_latent_model_observations.csv"
-LC = ROOT / "results/stage1b6be_full_reza_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
+LC = ROOT / "results/stage1b6be_FULL_STRICT_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
 
 if not POINT.exists():
     raise SystemExit(f"Missing point table: {POINT}")

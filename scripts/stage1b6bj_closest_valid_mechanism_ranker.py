@@ -177,7 +177,7 @@ def category(feature, mechanism_type):
 def main():
     gates_path = IN_TAB / "GATED_STRICT_ECOLOGICAL_SURVIVORS.csv"
     primary_path = IN_TAB / "PRIMARY_STRICT_ECOLOGICAL_MECHANISM_SCREEN.csv"
-    c4_path = IN_TAB / "REZA_REQUIRED_C4_FULL_CONTROL_CHECK.csv"
+    c4_path = IN_TAB / "project_REQUIRED_C4_FULL_CONTROL_CHECK.csv"
     audit_path = IN_TAB / "PROGRAMMING_AUDIT.json"
 
     gates = safe_read(gates_path)
@@ -192,7 +192,7 @@ def main():
     for c in [
         "primary_pass", "bootstrap_gate", "clean_gate",
         "product_all_gate", "product_clean_gate", "tower_strict_gate",
-        "FULL_REZA_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER",
+        "FULL_STRICT_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER",
     ]:
         if c not in gates.columns:
             gates[c] = False
@@ -200,7 +200,7 @@ def main():
     for c in [
         "primary_pass", "bootstrap_gate", "clean_gate",
         "product_all_gate", "product_clean_gate", "tower_strict_gate",
-        "FULL_REZA_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER",
+        "FULL_STRICT_STRICT_PASS", "SATELLITE_STRICT_PASS_NO_TOWER",
     ]:
         gates[c] = gates[c].map(boolify)
 
@@ -216,7 +216,7 @@ def main():
     gates["non_tower_gate_score_0_to_5"] = gates[non_tower_gates].sum(axis=1)
     gates["full_gate_score_0_to_6"] = gates[full_gates].sum(axis=1)
     gates["distance_from_satellite_strict"] = 5 - gates["non_tower_gate_score_0_to_5"]
-    gates["distance_from_full_reza_strict"] = 6 - gates["full_gate_score_0_to_6"]
+    gates["distance_from_FULL_STRICT_strict"] = 6 - gates["full_gate_score_0_to_6"]
 
     gates["story_category"] = gates.apply(
         lambda r: category(r.get("feature", ""), r.get("mechanism_type", "")),
@@ -231,8 +231,8 @@ def main():
     gates["tower_failure_reason"] = gates.apply(fail_reason_tower, axis=1)
 
     def tier(r):
-        if boolify(r.get("FULL_REZA_STRICT_PASS")):
-            return "TIER_0_FULL_REZA_STRICT_PASS"
+        if boolify(r.get("FULL_STRICT_STRICT_PASS")):
+            return "TIER_0_FULL_STRICT_STRICT_PASS"
         if boolify(r.get("SATELLITE_STRICT_PASS_NO_TOWER")):
             return "TIER_1_SATELLITE_STRICT_PASS_TOWER_MISSING"
         if r["non_tower_gate_score_0_to_5"] == 4:
@@ -248,7 +248,7 @@ def main():
     # This is the ranking the user actually needs.
     gates = gates.sort_values(
         [
-            "FULL_REZA_STRICT_PASS",
+            "FULL_STRICT_STRICT_PASS",
             "SATELLITE_STRICT_PASS_NO_TOWER",
             "non_tower_gate_score_0_to_5",
             "full_gate_score_0_to_6",
@@ -284,7 +284,7 @@ def main():
         "non_tower_gate_score_0_to_5",
         "full_gate_score_0_to_6",
         "distance_from_satellite_strict",
-        "distance_from_full_reza_strict",
+        "distance_from_FULL_STRICT_strict",
         "primary_pass",
         "bootstrap_gate",
         "clean_gate",
@@ -325,7 +325,7 @@ def main():
         except Exception:
             audit = {}
 
-    full_count = int(gates["FULL_REZA_STRICT_PASS"].sum())
+    full_count = int(gates["FULL_STRICT_STRICT_PASS"].sum())
     sat_count = int(gates["SATELLITE_STRICT_PASS_NO_TOWER"].sum())
     best_score = int(gates["non_tower_gate_score_0_to_5"].max()) if len(gates) else 0
 
@@ -339,7 +339,7 @@ def main():
     lines.append("- Separate full professor-level pass from satellite-only near-pass and explain each failed gate.")
     lines.append("")
     lines.append("Strict pass counts")
-    lines.append(f"- FULL_REZA_STRICT_PASS: {full_count}")
+    lines.append(f"- FULL_STRICT_STRICT_PASS: {full_count}")
     lines.append(f"- SATELLITE_STRICT_PASS_NO_TOWER: {sat_count}")
     lines.append(f"- Best non-tower gate score observed: {best_score} / 5")
     lines.append("")

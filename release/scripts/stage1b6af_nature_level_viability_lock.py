@@ -460,7 +460,7 @@ ac2_path = Path("results/stage1b6ac2_environment_locked_trait_residual_fix/table
 if ac2_path.exists():
     d = try_read_csv(ac2_path)
     if d is not None and len(d):
-        passes = int(d.get("passes_mentor_20pct_residual_variance", pd.Series(False, index=d.index)).astype(str).str.lower().isin(["true", "1", "yes"]).sum())
+        passes = int(d.get("passes_reviewer_20pct_residual_variance", pd.Series(False, index=d.index)).astype(str).str.lower().isin(["true", "1", "yes"]).sum())
         best = d.sort_values("trait_r2_on_control_residual", ascending=False).iloc[0]
         evidence.append({
             "pillar": "environment_locked_controlled_trait_AC2",

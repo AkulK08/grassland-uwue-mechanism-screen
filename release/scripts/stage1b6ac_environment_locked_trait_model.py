@@ -352,7 +352,7 @@ if len(residuals):
 models.to_csv(TAB / "Table_PRODUCT02fd_environment_locked_models.csv", index=False)
 residuals.to_csv(TAB / "Table_PRODUCT02fe_climate_soil_residual_trait_tests.csv", index=False)
 
-# Decision logic: mentor-style success = trait explains >=20% climate/soil residual variance
+# Decision logic: reviewer-style success = trait explains >=20% climate/soil residual variance
 # and survives LOOCV direction stability.
 candidate = pd.DataFrame()
 if len(residuals):
@@ -365,20 +365,20 @@ if len(residuals):
 
 if len(candidate):
     b = candidate.iloc[0]
-    verdict = "ENVIRONMENT_LOCKED_TRAIT_ANALYSIS_PASSES_MENTOR_CRITERION"
+    verdict = "ENVIRONMENT_LOCKED_TRAIT_ANALYSIS_PASSES_reviewer_CRITERION"
     safe_claim = (
         f"Within the pre-locked environment {b['environment']}, effective rooting depth explains "
         f"{b['trait_r2_on_control_residual']:.3f} of climate/soil-residual variation in {b['outcome']} "
         f"(n={int(b['n'])}, Spearman residual association={b['spearman_trait_vs_residual']:.3f}, "
         f"permutation p={b['perm_p_spearman']:.4f}, LOO sign stability={b['loo_sign_stability']:.3f}). "
-        "This matches the mentor-specified trait pathway more closely than the earlier discovery scan."
+        "This matches the reviewer-specified trait pathway more closely than the earlier discovery scan."
     )
 else:
-    verdict = "ENVIRONMENT_LOCKED_TRAIT_ANALYSIS_DOES_NOT_PASS_FULL_MENTOR_CRITERION"
+    verdict = "ENVIRONMENT_LOCKED_TRAIT_ANALYSIS_DOES_NOT_PASS_FULL_reviewer_CRITERION"
     safe_claim = (
         "The prior scan found a strong rooting-depth association, but after locking the environment and controlling "
         "for climate and soil texture, the trait effect did not meet the >20% climate/soil-residual variance plus "
-        "LOOCV criterion. This would mean the honest claim is trait-consistent but not a full mentor-style trait proof."
+        "LOOCV criterion. This would mean the honest claim is trait-consistent but not a full reviewer-style trait proof."
     )
 
 decision = pd.DataFrame([{
@@ -392,7 +392,7 @@ decision = pd.DataFrame([{
     "verdict": verdict,
     "safe_claim": safe_claim,
     "blocking_next_stage": False,
-    "next_stage": "WRITE_MENTOR_ALIGNED_TRAIT_SECTION" if "PASSES" in verdict else "REPORT_TRAIT_SIGNAL_AS_ASSOCIATIONAL_AND_CONSIDER_BAYESIAN_MODEL",
+    "next_stage": "WRITE_reviewer_ALIGNED_TRAIT_SECTION" if "PASSES" in verdict else "REPORT_TRAIT_SIGNAL_AS_ASSOCIATIONAL_AND_CONSIDER_BAYESIAN_MODEL",
 }])
 decision.to_csv(TAB / "Table_PRODUCT02ff_environment_locked_trait_decision.csv", index=False)
 
@@ -471,9 +471,9 @@ report.append("```text")
 report.append(residuals.head(80).to_string(index=False) if len(residuals) else "No residual trait rows.")
 report.append("```")
 report.append("")
-report.append("## Mentor criterion")
+report.append("## reviewer criterion")
 report.append("")
-report.append("The mentor-style criterion is: inside the relevant environment, the core plant trait should explain at least 20% of climate/soil-residual response variance and survive leave-one-out direction stability.")
+report.append("The reviewer-style criterion is: inside the relevant environment, the core plant trait should explain at least 20% of climate/soil-residual response variance and survive leave-one-out direction stability.")
 report.append("")
 report.append(f"Figure status: `{figure_status}`")
 report.append("")

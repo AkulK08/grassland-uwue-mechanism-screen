@@ -30,9 +30,9 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-FINAL_REZA = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/STAGE1B6AS_FINAL_FULL_REZA_RIGOR_DECISION.json"
-FINAL_SITE = ROOT / "results/stage1b6as_final_full_reza_rigor/tables/Table_PRODUCT03dh_final_full_reza_site_status.csv"
-C4_SUMMARY = ROOT / "results/stage1b6ak_reza_complete_resolution_packet/tables/Table_PRODUCT03bm_c4_reza_decision_by_model.csv"
+FINAL_project = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/STAGE1B6AS_FINAL_FULL_STRICT_RIGOR_DECISION.json"
+FINAL_SITE = ROOT / "results/stage1b6as_final_FULL_STRICT_rigor/tables/Table_PRODUCT03dh_final_FULL_STRICT_site_status.csv"
+C4_SUMMARY = ROOT / "results/stage1b6ak_project_complete_resolution_packet/tables/Table_PRODUCT03bm_c4_project_decision_by_model.csv"
 
 def now():
     return datetime.now().isoformat(timespec="seconds")
@@ -105,7 +105,7 @@ def all_csvs():
     # Skip massive raw extracted tower files and hidden temp.
     files = [
         p for p in files
-        if "_reza_raw_exports" not in str(p)
+        if "_project_raw_exports" not in str(p)
         and ".ipynb_checkpoints" not in str(p)
         and p.stat().st_size > 10
     ]
@@ -573,9 +573,9 @@ def choose_thesis(test, class_test):
     return cand, thesis
 
 def main():
-    decision_reza = {}
-    if FINAL_REZA.exists():
-        decision_reza = json.loads(FINAL_REZA.read_text())
+    decision_project = {}
+    if FINAL_project.exists():
+        decision_project = json.loads(FINAL_project.read_text())
 
     inv = column_inventory()
     data, info, loaded = load_best_trait_response_table(inv)
@@ -644,19 +644,19 @@ def main():
         "best_trait_flux_thesis": thesis,
         "can_claim_trait_causes_flux_response": bool(mechanism_pass),
         "can_claim_c4_trait_causes_flux_response_after_controls": bool(c4_controlled_survives),
-        "reza_quality_context": {
-            "strict_quality_sites_n": decision_reza.get("strict_quality_sites_n"),
-            "sensitivity_quality_sites_n": decision_reza.get("sensitivity_quality_sites_n"),
-            "strict_top_et_product": decision_reza.get("strict_top_et_product"),
-            "sensitivity_top_et_product": decision_reza.get("sensitivity_top_et_product"),
+        "project_quality_context": {
+            "strict_quality_sites_n": decision_project.get("strict_quality_sites_n"),
+            "sensitivity_quality_sites_n": decision_project.get("sensitivity_quality_sites_n"),
+            "strict_top_et_product": decision_project.get("strict_top_et_product"),
+            "sensitivity_top_et_product": decision_project.get("sensitivity_top_et_product"),
         },
     }
 
     (TAB / "STAGE1B6AT_TRAIT_FLUX_MECHANISM_DECISION.json").write_text(json.dumps(decision, indent=2), encoding="utf-8")
 
-    # Reza addendum
+    # project addendum
     lines = []
-    lines.append("Hi Reza,")
+    lines.append("Hi project,")
     lines.append("")
     lines.append("I agree that the manuscript thesis should not be simply that products differ. I treated product uncertainty as the guardrail, not the biological claim, and ran an explicit trait-to-flux mechanism screen on the tower-ranked product framing.")
     lines.append("")
@@ -683,7 +683,7 @@ def main():
     lines.append("")
     lines.append("Best,")
     lines.append("Akul")
-    (TXT / "REZA_TRAIT_FLUX_MECHANISM_ADDENDUM.md").write_text("\n".join(lines), encoding="utf-8")
+    (TXT / "project_TRAIT_FLUX_MECHANISM_ADDENDUM.md").write_text("\n".join(lines), encoding="utf-8")
 
     report = []
     report.append("# Stage 1B.6AT trait-to-flux mechanism test")
@@ -708,7 +708,7 @@ def main():
     report.append(class_tests.sort_values('q_bh').head(80).to_string(index=False) if len(class_tests) else "No response-class tests were possible from the discovered table.")
     report.append("```")
     report.append("")
-    report.append("## Reza addendum")
+    report.append("## project addendum")
     report.append("```text")
     report.append("\n".join(lines))
     report.append("```")
@@ -721,7 +721,7 @@ def main():
     print("WROTE", TAB / "Table_PRODUCT03dp_trait_to_flux_response_tests.csv")
     print("WROTE", TAB / "Table_PRODUCT03dq_trait_to_response_class_tests.csv")
     print("WROTE", TAB / "Table_PRODUCT03dr_candidate_trait_flux_theses.csv")
-    print("WROTE", TXT / "REZA_TRAIT_FLUX_MECHANISM_ADDENDUM.md")
+    print("WROTE", TXT / "project_TRAIT_FLUX_MECHANISM_ADDENDUM.md")
 
 if __name__ == "__main__":
     main()

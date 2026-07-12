@@ -36,7 +36,7 @@ SEED = 20260704
 rng = np.random.default_rng(SEED)
 N_BOOT = 500
 
-JOINED = Path("results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv")
+JOINED = Path("results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv")
 if not JOINED.exists():
     raise FileNotFoundError(f"Missing C4 joined point table: {JOINED}. Run stage1b6ai first.")
 

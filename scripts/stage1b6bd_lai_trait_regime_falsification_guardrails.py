@@ -18,7 +18,7 @@ for p in [TAB, TXT]:
 
 POINT_CANDIDATES = [
     ROOT / "results/stage1b6az_point_provenance_and_c4_missingness/tables/FULL_POINT_PROVENANCE_TABLE.csv",
-    ROOT / "results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv",
+    ROOT / "results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv",
     ROOT / "results/trait_framework/phase8/table_latent_response_by_point.csv",
 ]
 

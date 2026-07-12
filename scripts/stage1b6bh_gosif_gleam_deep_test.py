@@ -22,13 +22,13 @@ for p in [TAB, FIG, TXT]:
 
 POINT_CANDIDATES = [
     ROOT / "results/stage1b6az_point_provenance_and_c4_missingness/tables/FULL_POINT_PROVENANCE_TABLE.csv",
-    ROOT / "results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv",
+    ROOT / "results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv",
     ROOT / "results/trait_framework/phase8/table_latent_response_by_point.csv",
 ]
 
 POINT_INPUT = next((p for p in POINT_CANDIDATES if p.exists()), None)
 OBS_INPUT = ROOT / "results/trait_framework/phase8/table_latent_model_observations.csv"
-LC_FLAGS_INPUT = ROOT / "results/stage1b6be_full_reza_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
+LC_FLAGS_INPUT = ROOT / "results/stage1b6be_FULL_STRICT_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
 
 if POINT_INPUT is None:
     raise SystemExit("No point-level input table found.")
@@ -447,7 +447,7 @@ if len(core_controls):
 
 if len(full_controls):
     model_specs.append({
-        "model": "full_reza_controls",
+        "model": "FULL_STRICT_controls",
         "full": f"{outcome} ~ lai_z + " + " + ".join(full_controls),
         "reduced": f"{outcome} ~ " + " + ".join(full_controls),
         "focal": "lai_z",
@@ -455,7 +455,7 @@ if len(full_controls):
 
 if "mat_z" in d.columns and len(full_controls_no_mat):
     model_specs.append({
-        "model": "LAI_x_MAT_full_reza_controls",
+        "model": "LAI_x_MAT_FULL_STRICT_controls",
         "full": f"{outcome} ~ lai_z * mat_z + " + " + ".join(full_controls_no_mat),
         "reduced": f"{outcome} ~ lai_z + mat_z + " + " + ".join(full_controls_no_mat),
         "focal": "lai_z:mat_z",
@@ -483,7 +483,7 @@ for mask_name, mask in masks.items():
         row["model"] = spec["model"]
         rows.append(row)
 
-        if spec["model"] == "full_reza_controls":
+        if spec["model"] == "FULL_STRICT_controls":
             boot = bootstrap_coef(sub, spec["full"], spec["focal"], n_boot=1000, seed=123)
             boot["mask"] = mask_name
             boot["model"] = spec["model"]

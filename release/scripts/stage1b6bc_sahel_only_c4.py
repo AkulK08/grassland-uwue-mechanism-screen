@@ -12,12 +12,12 @@ TXT = OUT / "text"
 TAB.mkdir(parents=True, exist_ok=True)
 TXT.mkdir(parents=True, exist_ok=True)
 
-DATA_PATH = ROOT / "results/stage1b6ay_final_reza_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
+DATA_PATH = ROOT / "results/stage1b6ay_final_project_audit/tables/Table_PRODUCT03fg_final_audit_dataset.csv"
 
 RESPONSE = "latent_slope_change"
 C4 = "c4_fraction_raw"
 
-# Reza full-control set
+# project full-control set
 CONTROLS = [
     "rooting_depth",
     "aridity",
@@ -282,7 +282,7 @@ def main():
     lines.append("SAHEL-ONLY FULL-CONTROL C4 CHECK")
     lines.append("")
     lines.append("Purpose")
-    lines.append("Test whether the direct C4 result passes Reza's full climate/environment control screen specifically within the Sahel.")
+    lines.append("Test whether the direct C4 result passes project's full climate/environment control screen specifically within the Sahel.")
     lines.append("")
     lines.append("Sahel definitions tested")
     for name, b in SAHEL_DEFS.items():
@@ -326,7 +326,7 @@ def main():
     lines.append("")
     lines.append("Interpretation template")
     lines.append("If any pass is True: Sahel may be a regional exception where direct C4 survives full controls, but this should be presented as a regional result, not a global result.")
-    lines.append("If no pass is True: Sahel does not rescue the direct C4 thesis under Reza's full controls.")
+    lines.append("If no pass is True: Sahel does not rescue the direct C4 thesis under project's full controls.")
     lines.append("")
     lines.append("Files")
     lines.append("results/stage1b6bc_sahel_only_c4/tables/STAGE1B6BC_SAHEL_ONLY_C4_DECISION.json")

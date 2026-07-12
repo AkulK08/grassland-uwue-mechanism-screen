@@ -18,7 +18,7 @@ for p in [TAB, TXT]:
 
 POINT = ROOT / "results/stage1b6az_point_provenance_and_c4_missingness/tables/FULL_POINT_PROVENANCE_TABLE.csv"
 OBS = ROOT / "results/trait_framework/phase8/table_latent_model_observations.csv"
-LC = ROOT / "results/stage1b6be_full_reza_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
+LC = ROOT / "results/stage1b6be_FULL_STRICT_lai_artifact_screen/tables/POINT_LEVEL_LANDCOVER_CROPLAND_FLAGS.csv"
 
 if not POINT.exists():
     raise SystemExit(f"Missing point table: {POINT}")
@@ -374,42 +374,42 @@ if core_controls:
 
 if full_controls:
     model_specs.append({
-        "model": "M3_full_Reza_controls_no_definition_FE",
+        "model": "M3_FULL_STRICT_controls_no_definition_FE",
         "formula": "y_z ~ lai_z + " + " + ".join(full_controls),
         "focal": "lai_z",
     })
 
 if full_controls and safe_fe:
     model_specs.append({
-        "model": "M4_full_Reza_controls_plus_safe_definition_FE",
+        "model": "M4_FULL_STRICT_controls_plus_safe_definition_FE",
         "formula": "y_z ~ lai_z + " + " + ".join(full_controls) + " + " + safe_fe,
         "focal": "lai_z",
     })
 
 if full_controls and broad_fe:
     model_specs.append({
-        "model": "M5_full_Reza_controls_plus_broad_definition_FE",
+        "model": "M5_FULL_STRICT_controls_plus_broad_definition_FE",
         "formula": "y_z ~ lai_z + " + " + ".join(full_controls) + " + " + broad_fe,
         "focal": "lai_z",
     })
 
 if controls_no_mat:
     model_specs.append({
-        "model": "I1_LAI_x_MAT_full_Reza_no_definition_FE",
+        "model": "I1_LAI_x_MAT_FULL_STRICT_no_definition_FE",
         "formula": "y_z ~ lai_z * mat_z + " + " + ".join(controls_no_mat),
         "focal": "lai_z:mat_z",
     })
 
 if controls_no_mat and safe_fe:
     model_specs.append({
-        "model": "I2_LAI_x_MAT_full_Reza_plus_safe_definition_FE",
+        "model": "I2_LAI_x_MAT_FULL_STRICT_plus_safe_definition_FE",
         "formula": "y_z ~ lai_z * mat_z + " + " + ".join(controls_no_mat) + " + " + safe_fe,
         "focal": "lai_z:mat_z",
     })
 
 if controls_no_mat and broad_fe:
     model_specs.append({
-        "model": "I3_LAI_x_MAT_full_Reza_plus_broad_definition_FE",
+        "model": "I3_LAI_x_MAT_FULL_STRICT_plus_broad_definition_FE",
         "formula": "y_z ~ lai_z * mat_z + " + " + ".join(controls_no_mat) + " + " + broad_fe,
         "focal": "lai_z:mat_z",
     })
@@ -469,12 +469,12 @@ main_keep = res[
         "CROPLAND_CLEAN_NO_BROAD_SAHEL_ROWS_NO_METRIC_EXCLUSION",
     ])
     & res["model"].isin([
-        "M3_full_Reza_controls_no_definition_FE",
-        "M4_full_Reza_controls_plus_safe_definition_FE",
-        "M5_full_Reza_controls_plus_broad_definition_FE",
-        "I1_LAI_x_MAT_full_Reza_no_definition_FE",
-        "I2_LAI_x_MAT_full_Reza_plus_safe_definition_FE",
-        "I3_LAI_x_MAT_full_Reza_plus_broad_definition_FE",
+        "M3_FULL_STRICT_controls_no_definition_FE",
+        "M4_FULL_STRICT_controls_plus_safe_definition_FE",
+        "M5_FULL_STRICT_controls_plus_broad_definition_FE",
+        "I1_LAI_x_MAT_FULL_STRICT_no_definition_FE",
+        "I2_LAI_x_MAT_FULL_STRICT_plus_safe_definition_FE",
+        "I3_LAI_x_MAT_FULL_STRICT_plus_broad_definition_FE",
     ])
 ].copy()
 main_keep.to_csv(TAB / "MAIN_ROW_LEVEL_NO_AVERAGE_RESULTS.csv", index=False)

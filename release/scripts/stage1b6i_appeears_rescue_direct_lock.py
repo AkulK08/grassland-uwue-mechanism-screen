@@ -237,35 +237,35 @@ decisions.append({
 decision = pd.DataFrame(decisions)
 decision.to_csv(TAB / "Table_PRODUCT02bd_final_source_decision_no_gee_no_new_appeears.csv", index=False)
 
-mentor_gap_rows = [
+reviewer_gap_rows = [
     {
-        "mentor_requirement": "MODIS GPP in 3x3 product matrix",
+        "reviewer_requirement": "MODIS GPP in 3x3 product matrix",
         "current_source_plan": decision[decision.product_group.eq("MODIS_GPP_MOD17")]["decision"].iloc[0],
         "left_behind": False,
     },
     {
-        "mentor_requirement": "MODIS ET in 3x3 product matrix",
+        "reviewer_requirement": "MODIS ET in 3x3 product matrix",
         "current_source_plan": decision[decision.product_group.eq("MODIS_ET_MOD16")]["decision"].iloc[0],
         "left_behind": False,
     },
     {
-        "mentor_requirement": "LAI / growing-season / canopy covariate",
+        "reviewer_requirement": "LAI / growing-season / canopy covariate",
         "current_source_plan": "direct Earthdata MCD15A2H point extraction",
         "left_behind": False,
     },
     {
-        "mentor_requirement": "burned/disturbed observation exclusion",
+        "reviewer_requirement": "burned/disturbed observation exclusion",
         "current_source_plan": "direct Earthdata MCD64A1 point extraction",
         "left_behind": False,
     },
     {
-        "mentor_requirement": "full gridded xarray/Zarr MODIS cube",
+        "reviewer_requirement": "full gridded xarray/Zarr MODIS cube",
         "current_source_plan": "not feasible without external storage; tower-centered strict point extraction used instead",
-        "left_behind": "Only if mentor explicitly requires gridded map/cube rather than tower-centered product arbitration.",
+        "left_behind": "Only if reviewer explicitly requires gridded map/cube rather than tower-centered product arbitration.",
     },
 ]
-mentor = pd.DataFrame(mentor_gap_rows)
-mentor.to_csv(TAB / "Table_PRODUCT02be_mentor_requirement_gap_lock.csv", index=False)
+reviewer = pd.DataFrame(reviewer_gap_rows)
+reviewer.to_csv(TAB / "Table_PRODUCT02be_reviewer_requirement_gap_lock.csv", index=False)
 
 report = []
 report.append("# Stage 1B.6I AppEEARS rescue + direct extraction lock")
@@ -294,10 +294,10 @@ report.append("```text")
 report.append(decision.to_string(index=False))
 report.append("```")
 report.append("")
-report.append("## Mentor requirement gap lock")
+report.append("## reviewer requirement gap lock")
 report.append("")
 report.append("```text")
-report.append(mentor.to_string(index=False))
+report.append(reviewer.to_string(index=False))
 report.append("```")
 report.append("")
 report.append("## Strict rule")
@@ -316,7 +316,7 @@ machine = {
         "candidate_files": str(TAB / "Table_PRODUCT02bb_local_appeears_candidate_files.csv"),
         "candidate_coverage": str(TAB / "Table_PRODUCT02bc_local_appeears_candidate_coverage.csv"),
         "source_decision": str(TAB / "Table_PRODUCT02bd_final_source_decision_no_gee_no_new_appeears.csv"),
-        "mentor_gap_lock": str(TAB / "Table_PRODUCT02be_mentor_requirement_gap_lock.csv"),
+        "reviewer_gap_lock": str(TAB / "Table_PRODUCT02be_reviewer_requirement_gap_lock.csv"),
         "report": str(TXT / "STAGE1B6I_APPEEARS_RESCUE_DIRECT_LOCK_REPORT.md"),
     }
 }
@@ -327,5 +327,5 @@ print("")
 print("WROTE", TAB / "Table_PRODUCT02bb_local_appeears_candidate_files.csv")
 print("WROTE", TAB / "Table_PRODUCT02bc_local_appeears_candidate_coverage.csv")
 print("WROTE", TAB / "Table_PRODUCT02bd_final_source_decision_no_gee_no_new_appeears.csv")
-print("WROTE", TAB / "Table_PRODUCT02be_mentor_requirement_gap_lock.csv")
+print("WROTE", TAB / "Table_PRODUCT02be_reviewer_requirement_gap_lock.csv")
 print("WROTE", TXT / "STAGE1B6I_APPEEARS_RESCUE_DIRECT_LOCK_REPORT.md")

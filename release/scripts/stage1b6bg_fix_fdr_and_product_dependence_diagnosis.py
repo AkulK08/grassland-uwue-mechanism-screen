@@ -8,7 +8,7 @@ from scipy import stats
 warnings.filterwarnings("ignore")
 
 ROOT = Path.cwd()
-PREV = ROOT / "results/stage1b6bf_lai_reza_lock_package"
+PREV = ROOT / "results/stage1b6bf_lai_project_lock_package"
 PREV_TAB = PREV / "tables"
 
 OUT = ROOT / "results/stage1b6bg_fix_fdr_and_product_dependence_diagnosis"
@@ -19,7 +19,7 @@ for p in [TAB, TXT]:
 
 POINT_INPUT = ROOT / "results/stage1b6az_point_provenance_and_c4_missingness/tables/FULL_POINT_PROVENANCE_TABLE.csv"
 if not POINT_INPUT.exists():
-    POINT_INPUT = ROOT / "results/stage1b6ai_reza_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
+    POINT_INPUT = ROOT / "results/stage1b6ai_project_final_lock_with_c4/tables/Table_PRODUCT03aq_c4_sampled_point_table.csv"
 if not POINT_INPUT.exists():
     POINT_INPUT = ROOT / "results/trait_framework/phase8/table_latent_response_by_point.csv"
 if not POINT_INPUT.exists():
@@ -399,7 +399,7 @@ memo.append("")
 memo.append("Interpretation:")
 memo.append("- If the GOSIF × GLEAM rows remain null/positive, we cannot claim the least LAI-dependent product pair supports LAI.")
 memo.append("- In that case, LAI can still be a conditional/global regime signal, but algorithmic circularity remains a serious limitation.")
-memo.append("- The honest message to Reza should distinguish the latent/global LAI result from the exact product-pair failure.")
+memo.append("- The honest message to project should distinguish the latent/global LAI result from the exact product-pair failure.")
 memo.append("")
 memo.append("Important files:")
 for f in [

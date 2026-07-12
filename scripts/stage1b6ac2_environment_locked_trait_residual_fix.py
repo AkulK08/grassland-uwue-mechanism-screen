@@ -214,7 +214,7 @@ TRAITS = [c for c in ["rooting_depth", "p50", "psi50", "isohydricity"] if c in d
 OUTCOMES = [c for c in ["latent_post_slope", "latent_slope_change", "latent_satbreak_probability", "p_satbreak", "p_threshold_like"] if c in df.columns]
 
 CONTROL_SETS = {
-    # Full mentor-inspired set, but may be overparameterized for n=22.
+    # Full reviewer-inspired set, but may be overparameterized for n=22.
     "full_climate_soil_lai": [
         "aridity",
         "mean_annual_precipitation",
@@ -323,7 +323,7 @@ for env_name, env_col in ENVIRONMENTS:
                     "loo_sign_stability": loo_stab,
                     "loo_median_slope": loo_median_slope,
                     "loo_slopes": loo_slopes,
-                    "passes_mentor_20pct_residual_variance": bool(
+                    "passes_reviewer_20pct_residual_variance": bool(
                         trait_fit["r2"] >= 0.20
                         and (pd.isna(p) or p <= 0.15)
                         and (pd.isna(loo_stab) or loo_stab >= 0.80)
@@ -336,7 +336,7 @@ resids = pd.DataFrame(resid_rows)
 
 if len(resids):
     resids = resids.sort_values(
-        ["passes_mentor_20pct_residual_variance", "trait_r2_on_control_residual", "perm_p_spearman", "loo_sign_stability"],
+        ["passes_reviewer_20pct_residual_variance", "trait_r2_on_control_residual", "perm_p_spearman", "loo_sign_stability"],
         ascending=[False, False, True, False],
     )
 
@@ -350,27 +350,27 @@ primary_candidates = resids[
     (resids["environment"].eq("primary_north_midlatitude_30N_45N"))
     & (resids["outcome"].eq("latent_post_slope"))
     & (resids["trait"].eq("rooting_depth"))
-    & (resids["passes_mentor_20pct_residual_variance"])
+    & (resids["passes_reviewer_20pct_residual_variance"])
 ].copy() if len(resids) else pd.DataFrame()
 
 any_candidates = resids[
     (resids["trait"].eq("rooting_depth"))
-    & (resids["passes_mentor_20pct_residual_variance"])
+    & (resids["passes_reviewer_20pct_residual_variance"])
 ].copy() if len(resids) else pd.DataFrame()
 
 if len(primary_candidates):
     b = primary_candidates.iloc[0]
-    verdict = "PRIMARY_ENVIRONMENT_LOCKED_ROOTING_DEPTH_PASSES_MENTOR_CRITERION"
+    verdict = "PRIMARY_ENVIRONMENT_LOCKED_ROOTING_DEPTH_PASSES_reviewer_CRITERION"
     safe_claim = (
         f"After locking the north-midlatitude 30N-45N environment, rooting depth explains "
         f"{b['trait_r2_on_control_residual']:.3f} of residual variation in latent post-stress slope after the "
         f"{b['control_set']} controls (n={int(b['n'])}, Spearman residual r={b['spearman_trait_vs_residual']:.3f}, "
         f"permutation p={b['perm_p_spearman']:.4f}, LOO sign stability={b['loo_sign_stability']:.3f}). "
-        "This satisfies the mentor-style trait-analysis criterion."
+        "This satisfies the reviewer-style trait-analysis criterion."
     )
 elif len(any_candidates):
     b = any_candidates.iloc[0]
-    verdict = "SENSITIVITY_ENVIRONMENT_ROOTING_DEPTH_PASSES_MENTOR_CRITERION"
+    verdict = "SENSITIVITY_ENVIRONMENT_ROOTING_DEPTH_PASSES_reviewer_CRITERION"
     safe_claim = (
         f"Rooting depth passes the residual trait criterion in {b['environment']} for {b['outcome']} after "
         f"{b['control_set']} controls, but the primary north-midlatitude latent_post_slope test does not. "
@@ -379,13 +379,13 @@ elif len(any_candidates):
     )
 elif len(resids):
     b = resids.iloc[0]
-    verdict = "RESIDUAL_TRAIT_TESTS_RUN_BUT_NO_MENTOR_PASS"
+    verdict = "RESIDUAL_TRAIT_TESTS_RUN_BUT_NO_reviewer_PASS"
     safe_claim = (
         f"The residual trait tests now ran successfully, but no rooting-depth result met the full >20% residual-variance "
         f"plus permutation/LOOCV criterion. The strongest residual result was {b['trait']} in {b['environment']} "
         f"for {b['outcome']} after {b['control_set']} controls, with residual R2={b['trait_r2_on_control_residual']:.3f}, "
         f"permutation p={b['perm_p_spearman']:.4f}, and LOO sign stability={b['loo_sign_stability']:.3f}. "
-        "The honest claim is a strong discovered trait association, not a full controlled mentor-style trait proof."
+        "The honest claim is a strong discovered trait association, not a full controlled reviewer-style trait proof."
     )
 else:
     verdict = "RESIDUAL_TRAIT_TESTS_STILL_EMPTY"
@@ -397,7 +397,7 @@ else:
 decision = pd.DataFrame([{
     "generated": datetime.now().isoformat(timespec="seconds"),
     "n_residual_trait_tests": int(len(resids)),
-    "n_passing_residual_trait_tests": int(resids["passes_mentor_20pct_residual_variance"].sum()) if len(resids) else 0,
+    "n_passing_residual_trait_tests": int(resids["passes_reviewer_20pct_residual_variance"].sum()) if len(resids) else 0,
     "verdict": verdict,
     "safe_claim": safe_claim,
     "blocking_next_stage": False,

@@ -216,7 +216,7 @@ final_ready = (
 )
 
 if final_ready:
-    verdict = "FINAL_MENTOR_READY_CLAIM_LOCK_COMPLETE"
+    verdict = "FINAL_reviewer_READY_CLAIM_LOCK_COMPLETE"
     blocking_next = False
 else:
     verdict = "FINAL_CLAIM_LOCK_NEEDS_REVIEW"
@@ -297,7 +297,7 @@ report.append("- Figures directory: `results/stage1b6v_final_claim_lock/figures/
 report.append("")
 report.append("## Strict rule")
 report.append("")
-report.append("This lock supports a mentor-ready heterogeneous-response claim, not a universal global breakdown or causal biome/trait mechanism claim.")
+report.append("This lock supports a reviewer-ready heterogeneous-response claim, not a universal global breakdown or causal biome/trait mechanism claim.")
 report.append("")
 
 (TXT / "STAGE1B6V_FINAL_CLAIM_LOCK_REPORT.md").write_text("\n".join(report), encoding="utf-8")
