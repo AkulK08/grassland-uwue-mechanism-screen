@@ -10,18 +10,31 @@ __pycache__/
 *token*
 *secret*
 *credential*
+
+# raw / processed data too large for GitHub
 data/raw/
 data/external/
 data/cache/
 data/tmp/
-downloads/
+data/interim/
+data/processed/
+data/raw_local/
+data/raw_original/
+
+# large outputs
+bootstrap_runs/
+logs/
+tmp/
+results/
+paper_writing_bundle/
+
+# large file types
 *.nc
 *.nc4
 *.hdf
 *.h5
 *.tif
 *.tiff
-*.grib
 *.zip
 *.tar
 *.tar.gz
@@ -32,9 +45,3 @@ downloads/
 *.pdf
 *.docx
 *.pptx
-*.key
-*.pages
-results/**/figures/*.png
-results/**/figures/*.jpg
-results/**/figures/*.jpeg
-results/**/figures/*.pdf
